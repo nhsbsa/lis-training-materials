@@ -1,0 +1,688 @@
+hr {
+	clear: left;	
+}
+
+.done-panel {
+    background-color: #005EB8;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.done-panel>.heading-small {
+    margin-top: .875em;
+    margin-bottom: 0.01em;
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 0px;
+}
+
+.done-panel>.heading-large {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.no-tick>.heading-large {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    margin: 0px;
+}
+
+.tabs-list {
+    background-color: #ccc;
+}
+
+.tabs-list li {
+    padding: 5px 10px;
+    margin: 0px 10px 0px 0px;
+    float: left;
+    background-color: #fff;
+    border-width: 1px 1px 0px 1px;
+}
+
+.tabs-list li.selected {
+    position: relative;
+    background-color: #ccc;
+    border-color: #ccc;
+    z-index: 5;
+}
+
+.tabs-list li a:focus {
+    color: #000;
+    background-color: #ccc;
+    outline: #ccc;
+}
+
+.tabs-list li a {
+    color: #777;
+    text-decoration: none;
+}
+
+.tabs-list li.selected a {
+    color: #000;
+}
+
+.tab {
+    border: 1px solid #ccc;
+    padding: 10px;
+    clear: both;
+    width: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.selected {
+    display: block;
+}
+
+.option-text {
+    clear: left;
+    margin-bottom: 10px;
+}
+
+@media all and (min-width: 641px) {
+    .form-group-margin {
+        margin-bottom: -50px !important;
+        font-size: 27px;
+    }
+}
+
+@media all and (max-width: 640px) {
+    .form-group-margin {
+        margin-bottom: -25px !important;
+    }
+}
+
+/* Start of tabs */
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: top;
+    list-style: none;
+    /*--Set height of tabs--*/
+    width: 100%;
+}
+
+ul.tabs li {
+    float: left;
+    margin-right: 5px;
+    height: 31px;
+    /*--Subtract 1px from the height of the unordered list--*/
+    line-height: 29px; /*--Vertically aligns the text within the tab--*/
+    padding: 8px 7px;
+    /* overflow: hidden; */
+    position: relative;
+    background-image: linear-gradient(-180deg, #dee0e2 92%, white 8%);
+}
+
+html ul.tabs li.active {
+    background: #ffffff;
+    border: 1px solid #bfc1c3;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px; /*--Pull the list item down 1px--*/
+    height: 30px;
+    /*--Makes the active tab look like it's connected with its content--*/
+}
+
+@media ( min-width : 641px) {
+    html ul.tabs li.active a:focus {
+        outline: 3px solid #ffbf47;
+        outline-offset: 6px;
+    }
+}
+
+ul.tabs li.active a {
+    text-decoration: none;
+    color: #0b0c0c;
+    display: block; /* not sure if needed*/
+    font-size: 16px;
+    border: none;
+    /*--Gives the level look with a 1px white border inside the list item--*/
+    outline: none;
+}
+
+ul.tabs li a {
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    /*--Gives the level look with a 1px white border inside the list item--*/
+    outline: none;
+}
+
+ul.tabs li a:hover {
+    background: transparent;
+}
+
+li.active a:hover {
+    /*
+    --Makes sure that the active tab does not listen to the hover properties--
+    */
+    color: #0b0c0c;
+}
+
+.tab_container {
+    border: 1px solid #bfc1c3;
+    border-top: 1px solid #bfc1c3;
+    overflow: hidden;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+
+.tabs-link {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+@media ( min-width : 641px) {
+    .tabs-link:focus {
+        background-color: transparent;
+        outline: 3px solid #ffbf47;
+        outline-offset: 5px;
+    }
+}
+
+.tabs-link:focus {
+    background-color: transparent;
+}
+
+.tab_content {
+    padding: 20px;
+    font-size: 1em;
+}
+
+@media ( max-width : 641px) {
+    ul.tabs li a {
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        padding: 5px 5px;
+        border: none;
+        outline: none;
+        line-height: 20px;
+    }
+}
+
+@media ( max-width : 641px) {
+    html ul.tabs li, html ul.tabs li.active {
+        float: left;
+        list-style: none;
+        width: 100%;
+        border: none;
+        border-top: 1px solid #bfc1c3;
+        border-bottom: 1px solid #bfc1c3;
+        background: white;
+        line-height: 1.25;
+        /*--Vertically aligns the text within the tab--*/
+        position: relative;
+        margin-bottom: -1px;
+        /*-- Makes sure that the top and bottom of the lines don't overlap */
+        height: 30px;
+    }
+}
+
+@media ( max-width : 641px) {
+    .tab_container {
+        border: none;
+        overflow: hidden;
+        clear: both;
+        float: left;
+        width: 100%;
+        background: #fff;
+    }
+}
+
+@media ( max-width : 641px) {
+    ul.tabs li.active a {
+        text-decoration: none;
+        color: #0b0c0c;
+        display: block;
+        font-size: 16px;
+        padding: 5px 5px;
+        border: none;
+        outline: none;
+        line-height: 20px;
+    }
+}
+
+@media ( max-width : 641px) {
+    ul.tabs li a {
+        text-decoration: none;
+        color: #2360AC;
+        display: block;
+        font-size: 16px;
+        padding: 5px 5px;
+        border: none;
+        outline: none;
+        line-height: 20px;
+    }
+}
+
+@media ( max-width : 641px) {
+    ul.tabs li a:visited {
+        color: #4c2c92;
+    }
+}
+
+@media ( min-width : 641px) {
+    .tab-view {
+        float: left;
+        width: 95%;
+    }
+}
+
+@media ( max-width : 640px) {
+    .tab-view {
+        float: left;
+        width: 93%;
+    }
+}
+
+/* End of tabs */
+.clear {
+    clear: both;
+}
+
+.content-wrapper {
+    margin-top: -1px;
+}
+
+@media only screen and (min-width:641px) {
+    .column-answer {
+        width: 46.666%;
+    }
+
+    .column-change {
+        width: 20%;
+    }
+
+    span.change {
+        float: right;
+    }
+}
+@media screen and (max-width: 961px) and (min-width: 641px) {
+    .date-answer {
+        display:block;
+    }
+}
+
+div.column-one-third p span {
+    word-wrap: break-word;
+}
+
+.single-line-answer {
+    display: block;
+}
+
+span.line-break {
+    display: block
+}
+
+.hint-paragraph {
+    margin-bottom: .0526315789em;
+    font-size: 16px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+hr.hr-margin {
+    display: block;
+    background: #bfc1c3;
+    border: 0;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.autoProgress {
+    pointer-events: none;
+}
+
+.composite-view {
+    margin-top: -15px;
+}
+
+@media ( max-width : 640px) {
+    .form-control {
+        width: 95%;
+    }
+}
+
+element.style {
+    margin-top: 0px;
+}
+
+@media all and (min-width: 800px) {
+    p.change {
+        padding-left: 55%;
+    }
+}
+
+.heading-margins {
+    padding-top: 25px;
+}
+
+.form-group .panel-border-narrow:last-child {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.group-margin {
+    padding-top: 10px;
+}
+
+/* application progress task list */
+.section-row {
+	display: flex;
+    border-bottom: 1px solid #b1b4b6;
+    justify-content: space-between;
+    padding: 8px 0px;
+    align-items: center;
+}
+
+.progress-box {
+    display: inline-block;
+    padding: 6px 8px 4px 8px;
+    letter-spacing: 1px;
+}
+
+.task-completed {
+    color: #fff;
+    background-color: #005ea5;
+    border: 3px solid #005ea5;
+}
+
+.task-incomplete {
+    color: #005ea5;
+    background-color: transparent;
+    border: 3px solid #005ea5;
+}
+
+.task-cant-start {
+    color: #333;
+    background-color: #DFE0E2;
+    border: 3px solid #DFE0E2;
+}
+
+@media only screen and (min-width:400px) {
+    .progress-box {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+}
+
+@media only screen and (max-width:399px) {
+    .progress-box {
+        font-size: 12px;
+        line-height: 1.25;
+    }
+}
+/* end of task list */
+
+.form-hint-list-item {
+    margin: 0 0 0.6em 0;
+    display: table;
+    margin-bottom: 0.3em;
+    margin-top: 0.6em;
+}
+
+.form-hint-list-item__indicator {
+    vertical-align: middle;
+    margin-right: .26316em;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../images/bullet-icon.svg");
+}
+
+.form-hint-list-item--valid .form-hint-list-item__indicator {
+    background-image: url("/apply-for-help-with-nhs-costs/images/tick-green-8a868eb1bca9194aebb3452623c00349.svg");
+}
+
+.form-hint-list-item--false {
+    color: black;
+}
+
+.form-hint-list-item--false .form-hint-list-item__indicator {
+    background-image: url("/apply-for-help-with-nhs-costs/images/cross-red-36c14c075e39043416c23ee3e49c0d24.svg");
+}
+
+.form-hint-list-item__primary {
+    display: table-cell;
+    padding-right: 0.25em;
+}
+
+.heading-xlarge {
+    margin-top: 1em;
+}
+
+.symbol {
+    font-weight: bold;
+}
+
+.nested-group {
+    padding-top: 0 !important;
+    margin-bottom: 30px;
+}
+
+.callout {
+    border: 8px solid #0072ce;
+    padding: 16px;
+    padding-top: 0 !important;
+}
+
+.link {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #2360AC;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.link:hover {
+    color: #4276B8;
+    text-decoration: underline !important;
+    border: none;
+}
+
+/* All mobile screen less than 400 */
+@media ( max-width : 399px) {
+    .link {
+        width: 200px;
+    }
+}
+
+/* Chonga list */
+button.list-button {
+    text-align: left;
+    width: 100%;
+    padding: 20px 0px;
+    cursor: pointer;
+    color: #2360AC;
+}
+
+
+button.list-button:focus {
+    outline: 3px solid #FFBF47;
+}
+
+button.list-button:hover {
+    background-color: transparent;
+    border: 0px;
+    color: #4276B8;
+}
+
+div.list-button {
+	margin-top: 15px;
+	color: #333333; 
+}
+
+.showhide:hover {
+    color: #2B8CC4;
+}
+
+.line_break:after {
+    content: ' ';
+    display: block;
+}
+
+.accordion-expand-holder {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.accordion-expand-all {
+    float: right;
+    display: none;
+}
+
+@media ( min-width : 641px) {
+    .button-text {
+        font-size: 24px;
+        line-height: 1.3157894737;
+    }
+}
+
+.subsection-wrapper {
+    border-top: 1px solid #bfc1c3;
+}
+
+.subsection-wrapper:nth-last-child(2) {
+    border-bottom: 1px solid #bfc1c3;
+}
+
+.plusminus {
+    float: left;
+    color: #333333;
+    padding-right: 15px;
+    width: 14.3px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.showhide {
+    color: #005ea5;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    display: none;
+}
+
+.accordian {
+    margin-left: 27px;
+    margin-top: 25px;
+}
+
+@media ( max-width : 448px) {
+    .lede-header {
+        margin-left: 10px;
+        font-size: 17px;
+    }
+}
+
+@media ( max-width : 448px) {
+    .showhide {
+        margin-left: 24px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+button {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.button-text {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+/* end of chonga */
+.secondary-head {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-top: 18px;
+    display: block;
+}
+
+.form-answer {
+    margin-bottom: 1.0526315789em;
+}
+
+.area-box {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* monetary amount */
+.currency-input-inner {
+    position: relative;
+}
+
+span.symbol {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    font-weight: bold;
+    color: #0b0c0c;
+}
+
+.currency-amount {
+    padding-left: 25px;
+}
+
+@media all and (-ms-high-contrast: none) , ( -ms-high-contrast : active)
+    {
+    /* IE10+ CSS styles */
+    .currency-amount {
+        padding-bottom: 7px;
+    }
+}
+
+.display-js {
+    display: none;
+}
+
+/* error display inputs */
+.error > fieldset > .form-date > .form-group > input, .error > fieldset > input, .error > fieldset > .form-group > input, .error > fieldset > .currency-input > .currency-input-inner > input, .error > fieldset > textarea {
+    border: 4px solid #b10e1e;
+}
+
+button.link{
+	margin-left: 30px;
+	margin-top: 0px;
+}
+
+@media all and (max-width: 640px) {
+	button.link {
+		margin-left: 0px;
+		margin-top: 30px;
+	}
+}
+
+#startdate-content > h2, #enddate-content > h2 {
+    margin-top:0px;
+}

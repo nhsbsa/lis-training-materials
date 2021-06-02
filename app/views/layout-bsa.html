@@ -1,0 +1,89 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template-bsa.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <!-- <link href="/css/main.css" rel="stylesheet"> -->
+{% endblock %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Edit the header -->
+<!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+  <header role="banner" id="nhs-global-header" class="with-proposition">
+    <div class="header-wrapper">
+      <div class="header-global">
+        <div class="header-logo">
+          <a href="/" title="Go to the homepage" id="logo" class="content"> <!--[if gt IE 8]><!-->
+            <img alt="NHS Business Service Authority" src="/images/bsa_logo.svg" />
+            <!--<![endif]--> <!--[if lte IE 8]><img th:src="@{/webjars/nhs-template/images/bsa_logo.png}" alt="NHS Business Service Authority logo" /><![endif]-->
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+<!-- Edit the footer -->
+<!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+<footer class="group js-footer" id="footer" role="contentinfo">
+  <div class="footer-wrapper">
+    <div class="footer-meta">
+      <div class="footer-meta-inner">
+        <h2 class="visuallyhidden">Support links</h2>
+        <ul>
+          <li><a id="privacy-footer-link" target="_blank" rel="noopener" href="https://www.nhsbsa.nhs.uk/our-policies/privacy/check-what-help-you-could-get-pay-nhs-costs-privacy-notice">
+          Privacy<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          
+          <!--Privacy link for static cookie pages-->
+          
+          <li><a id="cookies-footer-link" href="/check-for-help-paying-nhs-costs/cookies">
+          Cookies</a></li>
+          <li><a id="terms-footer-link" target="_blank" rel="noopener" href="https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions">
+          Terms and conditions<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a id="footer-link-accessibility" target="_blank" href="https://www.nhsbsa.nhs.uk/our-policies/accessibility/accessibility-statement-check-what-help-you-could-get-pay-nhs-costs">
+          Accessibility<span class="visually hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+        <p>
+          <ul>
+            <li>Built by the
+              <a id="bsa-footer-link" target="_blank" rel="noopener" href="http://www.nhsbsa.nhs.uk">NHS Business Services Authority<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </li>
+          </ul>
+        </p>
+        <div class="open-government-licence">
+          <p class="logo">
+            <a id="ogl-img-link" target="_blank" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener license">
+            Open Government Licence<span class="visually-hidden"> (opens in a new tab)</span></a>
+          </p>
+          <p class="ogl-text">
+            All content is available under the
+            <a id="ogl-text-link" target="_blank" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener license">
+            Open Government Licence v3.0<span class="visually-hidden"> (opens in a new tab)</span></a>, except where otherwise stated
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

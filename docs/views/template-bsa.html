@@ -1,0 +1,167 @@
+{%- from 'header/macro.njk' import header %}
+{%- from 'footer/macro.njk' import footer %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'action-link/macro.njk' import actionLink %}
+{%- from 'nav-a-z/macro.njk' import azNav %}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+{%- from 'card/macro.njk' import card %}
+{%- from 'care-card/macro.njk' import careCard %}
+{%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'details/macro.njk' import details %}
+{%- from 'header/macro.njk' import header %}
+{%- from 'hero/macro.njk' import hero %}
+{%- from 'footer/macro.njk' import footer %}
+{%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'images/macro.njk' import image %}
+{%- from 'inset-text/macro.njk' import insetText %}
+{%- from 'list-panel/macro.njk' import listPanel %}
+{%- from 'pagination/macro.njk' import pagination %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'tables/macro.njk' import table %}
+{%- from 'warning-callout/macro.njk' import warningCallout %}
+{%- from 'back-link/macro.njk' import backLink %}
+{%- from 'button/macro.njk' import button %}
+{%- from 'checkboxes/macro.njk' import checkboxes %}
+{%- from 'date-input/macro.njk' import dateInput %}
+{%- from 'error-message/macro.njk' import errorMessage %}
+{%- from 'error-summary/macro.njk' import errorSummary %}
+{%- from 'fieldset/macro.njk' import fieldset %}
+{%- from 'hint/macro.njk' import hint %}
+{%- from 'input/macro.njk' import input %}
+{%- from 'label/macro.njk' import label %}
+{%- from 'radios/macro.njk' import radios %}
+{%- from 'select/macro.njk' import select %}
+{%- from 'summary-list/macro.njk' import summaryList %}
+{%- from 'tag/macro.njk' import tag %}
+{%- from 'textarea/macro.njk' import textarea %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>{% block pageTitle %}NHS.UK prototype kit{% endblock %}</title>
+
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+
+    <!-- <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
+    <link type="font/woff2" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin> -->
+
+    {% block headCSS %}
+      <!-- <link href="/css/main.css" rel="stylesheet"> -->
+    {% endblock %}
+
+    <link media="screen" rel="stylesheet" href="/css/old-gov.css" />
+    <link media="screen" rel="stylesheet" href="/css/old-bsa.css" />
+    <link media="screen" rel="stylesheet" href="/css/app-extended.css" />
+    <link media="screen" rel="stylesheet" href="/css/yaff.css" />
+
+    <script src="/javascript/app-extended.js"></script>
+    <script src="/javascript/application.js"></script>
+    <script src="/javascript/govuk.js"></script>
+
+    {% block headIcons %}
+    <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="/images/bsa_logo.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
+    <meta name="msapplication-TileColor" content="#005eb8">
+    <meta name="msapplication-square70x70logo" content="/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
+    {% endblock %}
+
+    {% block head %}{% endblock %}
+    
+  </head>
+
+  <body class="nhs-bsa">
+
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    {% block bodyStart %}{% endblock %}
+
+      {% block skipLink %}
+        <div id="skiplink-container">
+          <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+      {% endblock %}
+
+      {% block header %}
+      <header role="banner" id="nhs-global-header" class="with-proposition">
+        <div class="header-wrapper">
+          <div class="header-global">
+            <div class="header-logo">
+              <a href="/" title="Go to the homepage" id="logo" class="content"> <!--[if gt IE 8]><!-->
+                <img alt="NHS Business Service Authority" src="/images/bsa_logo.svg" />
+              <!--<![endif]--> <!--[if lte IE 8]><img th:src="@{/webjars/nhs-template/images/bsa_logo.png}" alt="NHS Business Service Authority logo" /><![endif]-->
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      {% endblock %}
+
+      {% block beforeContent %}{% endblock %}
+
+      {% block main %}
+        <!-- <div class="nhsuk-width-container {{ containerClasses }}"> -->
+          {% block outerContent %}{% endblock %}
+          <main id="content" role="main">
+            {% block content %}{% endblock %}
+          </main>
+        <!-- </div> -->
+      {% endblock %}
+
+      {% block footer %}
+      <footer class="group js-footer" id="footer" role="contentinfo">
+				<div class="footer-wrapper">
+					<div class="footer-meta">
+						<div class="footer-meta-inner">
+							<h2 class="visuallyhidden">Support links</h2>
+							<ul>
+								<li><a id="privacy-footer-link" target="_blank" rel="noopener" href="https://www.nhsbsa.nhs.uk/our-policies/privacy/check-what-help-you-could-get-pay-nhs-costs-privacy-notice">
+								Privacy<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+								
+								<!--Privacy link for static cookie pages-->
+								
+								<li><a id="cookies-footer-link" href="/check-for-help-paying-nhs-costs/cookies">
+								Cookies</a></li>
+								<li><a id="terms-footer-link" target="_blank" rel="noopener" href="https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions">
+								Terms and conditions<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                <li><a id="footer-link-accessibility" target="_blank" href="https://www.nhsbsa.nhs.uk/our-policies/accessibility/accessibility-statement-check-what-help-you-could-get-pay-nhs-costs">
+                Accessibility<span class="visually hidden"> (opens in a new tab)</span></a></li>
+							</ul>
+							<p>
+								<ul>
+									<li>Built by the
+										<a id="bsa-footer-link" target="_blank" rel="noopener" href="http://www.nhsbsa.nhs.uk">NHS Business Services Authority<span class="visually-hidden"> (opens in a new tab)</span></a>
+									</li>
+								</ul>
+							</p>
+							<div class="open-government-licence">
+								<p class="logo">
+									<a id="ogl-img-link" target="_blank" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener license">
+									Open Government Licence<span class="visually-hidden"> (opens in a new tab)</span></a>
+								</p>
+								<p class="ogl-text">
+									All content is available under the
+									<a id="ogl-text-link" target="_blank" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener license">
+									Open Government Licence v3.0<span class="visually-hidden"> (opens in a new tab)</span></a>, except where otherwise stated
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+      {% endblock %}
+
+    {% block bodyEnd %}{% endblock %}
+
+  </body>
+</html>

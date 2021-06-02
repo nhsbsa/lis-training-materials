@@ -1,0 +1,657 @@
+@media all and (min-width: 641px) {
+  .form-group-margin {
+     margin-bottom: -50px !important ;
+     font-size: 27px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .form-group-margin {
+     margin-bottom: -25px !important ;
+  }
+}
+
+element.style {
+  margin-top: 0px;
+}
+  
+@media all and (min-width: 800px) {
+span.change {
+  padding-left: 55%; 
+  }
+}
+
+.radio-text {
+  padding-top: 3px;
+}
+
+.checkbox {
+  padding: 10px 10px 10px 45px;
+}
+
+.hidden-ref {
+  visibility: hidden;
+  display: none;
+}
+
+
+.refclass:before, .refclass:after {
+  content: '"';
+}
+  .refclass:empty {
+  display: none;
+  }
+
+.nhs-logo {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.clear {
+  clear: both;
+}
+
+.no-swoosh {
+  background-image: none !important;
+  height: 50px !important;
+  padding-bottom: 20px;
+}
+
+.form-item-wrapper {
+margin-top:30px;
+}
+
+input.search {
+  margin-left:3.5px;
+  width: 36px;
+  height: 38px;
+  border: 1px solid #005EB8;
+  border-width: 0 0 0 1px;
+  border-radius: 0;
+  overflow: hidden;
+  text-indent: -5000px;
+  color: #fff;
+  background-image: url(/apply-for-help-with-nhs-costs/images/search-icon-6a948f5233920ae226827d8a2d48a5af.png);
+  background-color: #005EB8;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.assessors-content {
+  margin-left: 3em !important;
+  max-width: none !important;
+}
+
+
+/* Timeout Modal */
+@media (max-width: 640px) {
+  .timeout-dialog {
+      width: 280px !important;
+  }
+}
+
+html.noScroll {
+  overflow: hidden;
+}
+
+.timeout-dialog {
+  z-index: 1002;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 435px;
+  padding: 30px;
+  border: 5px solid black;
+  background-color: #fff;
+}
+
+.modal-button {
+  margin-bottom: 1em;
+  font-size: 19px;
+}
+
+.modal-button.modal-button-link {
+  margin: 0;
+  padding: .526315em .789473em .263157em;
+}
+
+.recall-margin{
+margin-top: 50px;
+}
+hr.recall {
+  display: block;
+  background: #bfc1c3;
+  border: 0;
+  height: 1px;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.column-one-third-extra{
+  float: left;    
+  width: 250px;
+}
+
+.margin-group{
+  margin-top: 5px;
+}
+
+.mb {
+margin-bottom: 30px;
+}
+
+@media (max-width: 787px) {
+.column-one-third-extra {
+  float: left;
+  width: 250px;
+  margin-left: 15px;
+}
+.column-one-quarter{
+  width: 50px;
+  }
+} 
+
+@media (max-width: 640px) {
+.column-one-third-extra {
+  margin-right: 100px !important;
+  }
+}  
+
+.link-view{
+  margin-left: -13px;
+}
+
+@media (max-width: 787px) {
+.link-view {
+  margin-left: 0px;
+  }
+}
+
+@media (min-width: 641px){
+.tab-view {
+  float: left;
+  width: 100%;
+  }
+} 
+
+.loading-text{
+  text-align: center;
+}
+
+.lds-spinner {
+color: official;
+display: inline-block;
+position: relative;
+width: 64px;
+padding-left: 48%;
+}
+
+.lds-spinner div {
+transform-origin: 32px 32px;
+animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+content: " ";
+display: block;
+position: absolute;
+top: 3px;
+left: 29px;
+width: 5px;
+height: 14px;
+border-radius: 20%;
+background: #000000;
+}
+.lds-spinner div:nth-child(1) {
+transform: rotate(0deg);
+animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+transform: rotate(30deg);
+animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+transform: rotate(60deg);
+animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+transform: rotate(90deg);
+animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+transform: rotate(120deg);
+animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+transform: rotate(150deg);
+animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+transform: rotate(180deg);
+animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+transform: rotate(210deg);
+animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+transform: rotate(240deg);
+animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+transform: rotate(270deg);
+animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+transform: rotate(300deg);
+animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+transform: rotate(330deg);
+animation-delay: 0s;
+}
+@keyframes lds-spinner {
+0% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
+  
+@media (max-width: 512px) {
+.lds-spinner {
+  margin-left: -6%;
+}
+}  
+.autoProgress{
+  pointer-events: none;
+}
+.one-third {
+  width: 17%;
+  margin-top: 30px;
+  word-wrap: break-word;
+}
+
+.two-fourths {
+  width: 83%;
+  margin-top: 30px;
+}
+
+@media (max-width: 841px){
+.one-third {
+  width: 99%;
+  margin-top: 30px;
+  }   
+}
+  
+.ref-section {
+  font-size: 29px;
+}
+
+.line_break:after {
+  content: ' ';
+  display: block;
+}
+
+.form-answer{
+  margin-bottom: 1.0526315789em;
+}
+
+span.line-break {
+  display:block
+}
+/* phase banner */
+.phase-banner {
+margin:0px;
+}
+
+@media (min-width: 641px){
+.phase-banner {
+    margin: 0px;
+}
+}
+/* /. */ 
+
+/* cookie banner */
+.cookie-notice {
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 10px 0px;
+  top:0;
+  left:0;
+  width: 100%;
+  background: #D5E8F3;
+  z-index: 9999;
+}
+
+.bannerlink{
+  color: #2E3191;
+}
+
+.bannerlink:hover{
+  color: #2E3191;
+}
+
+#info-banner p {
+max-width: 960px;
+  margin: 0 15px;
+}
+
+span.notice-text, span.close-link {
+display: inline-block;
+}
+
+span.close-link {
+float: right;
+}
+
+@media (max-width: 639px) {
+.cookie-notice {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 434px) {
+span.notice-text, span.close-link {
+  display: block;
+}
+
+span.close-link {
+  float: none;
+  margin-top:10px;
+}
+}
+
+@media (min-width: 641px) {
+#info-banner p {
+  margin: 0 30px;
+}
+}
+
+@media (min-width: 1020px) {
+#info-banner p {
+  margin: 0 auto;
+}
+}
+/* /. */ 
+
+.view{
+  color: #2360AC;
+}
+
+.view:hover{
+  color: #2E3191;
+}   
+
+#footer .footer-meta .footer-meta-inner .open-government-licence p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+/* done panel */
+.done-panel > h1 {
+margin-top: 0px;
+margin-bottom: -10px;
+}
+
+.done-panel > h2 {
+margin-top: 0px;
+}
+
+/* evidence pages */
+.required-panel {
+background: #6f777b;
+padding: 25px 10px;
+}
+
+.required-panel > h1 {
+margin-top: 0px;
+margin-bottom: 20px;
+}
+
+.required-panel > h2 {
+margin: 0px;
+}
+
+.panel-text {
+color: #fff;
+display: block;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.icon-warning-white {
+  width: 35px;
+  height: 35px;
+  background-image: url(/apply-for-help-with-nhs-costs/images/icon-important-white-3c942474d1a7a22622dcfb4c8456c125.svg);
+}
+
+.highlight {
+  border: 10px solid #DEE0E2;
+  background-color: #F8F8F8;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.highlight > h2 {
+margin-top: 10px;
+}
+
+.evidence-body {
+  border-bottom: 1px solid #bfc1c3;
+  padding-bottom: 20px;
+  display:block;
+  margin-bottom: 10px;
+}
+
+div.cell-title {
+width: 30%;
+display:inline-block;
+word-break: break-word;
+  vertical-align: top;
+  border-bottom: none;
+}
+
+.evidence-row {
+  margin-top: 20px;
+}
+
+div.cell-summary {
+width: 65%;
+display:inline-block;
+padding-left:5px;
+}
+
+.panel-form-group {
+margin-bottom: 15px !important;
+}
+
+img.print-bsa-logo {
+   display:none;
+}
+
+ul.form-hint-list {
+  margin-bottom: 20px;
+}
+
+/* print icon */
+.print-icon {
+  background-image: url('/apply-for-help-with-nhs-costs/images/print-icon-aed84fd92005b080d972c23374571167.png');
+  padding-left: 50px;
+  overflow: display;
+  overflow-wrap: center center;
+  background-repeat: no-repeat;
+background-size: auto;
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+a.icon.print-icon {
+  margin-top: 20px;
+}
+
+@media (min-width: 641px){
+.panel-form-group {
+  margin-bottom:30px !important;
+}
+}
+
+/* UC screen */
+.grid-row-full {
+width:100%;
+}
+
+.heading-no-margin {
+  margin-top: 0em;
+}
+
+.image-border {
+border-style: solid;
+  border-width: 2px;
+  border-color: lightgray;
+  padding: 1em;
+  margin: 1em 0em 1em 1em;
+width: 45%;
+  /* min-height: 500px; */
+}
+
+/* Autocomplete */
+#autocomplete-container {
+  width:100%;
+}
+.form-group.error > fieldset > div > #autocomplete-container > .autocomplete__wrapper > input {
+  border: 5px solid #b10e1e;
+}
+
+@media all and (min-width: 1024px) {
+  #autocomplete-container{
+      width: 65%;
+  }
+}
+@media all and (max-width: 640px) {
+.image-border {
+  width: 100%;
+}
+}
+
+@media all and (max-width: 539px) {
+  .image-border {
+    width: 100%;
+   /* height: 380px; */
+  }
+}
+
+@media all and (min-width: 641px) {
+.grid-row-full {
+  width:155%;
+}
+}
+/* ./ */
+
+/* firefox only styles */
+@-moz-document url-prefix() {
+  summary {
+    display: list-item !important;
+  }
+}
+
+/* print styles */
+@media print {
+.noprint, .noprint *
+{
+  display: none !important; border:none;
+}
+html, body {
+  background:none !important;
+}
+.nhs-bsa #nhs-global-header {
+  display:none;
+}
+
+.header-wrapper {
+  margin: 0;
+  padding:0;
+}
+
+.highlight {
+  background: none;
+  border: none;
+  padding: 0px;
+}
+.required-panel {
+  background: none;
+  padding: 10px;
+  border: 3px solid #000;
+}
+
+.required-panel > h1 {
+  color: #000;
+}
+
+.required-panel > h2 {
+  color: #000;
+}
+
+.panel-text {
+  color: #000;
+}
+
+img.print-bsa-logo {
+    float: right;
+    width: 300px;
+    display:block;
+    margin-right:15px;
+}
+
+}
+
+/* assessor heading */
+.assessor-view-header__container{
+  margin-bottom: -30px;
+  padding-bottom: 10px;
+}
+.header-contents__container {
+display: flex;
+justify-content: space-between;
+margin-left: 3.5em;
+margin-right: 2em;
+padding-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.signout-link__container {
+max-width: 100%;
+font-weight: 800;
+font-size: 19px;
+word-break: break-all;
+}
+.nhsbsa-logo__container {
+max-width: 100%;
+}
+img.nhsbsa-logo__img {
+width: 100%;
+  display:block;
+  min-height: 50px; /* for firefox */
+}
+.nhsbsa-logo__link {
+  display: block;
+}
+.signout__link{
+  display:block;
+}
+@media only screen and (max-width:642px) {
+  .nhsbsa-logo__container{
+      margin-bottom: 15px;
+  }
+}
+/* /. */
