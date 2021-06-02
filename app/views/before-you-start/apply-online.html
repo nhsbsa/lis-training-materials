@@ -1,0 +1,70 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <form method="post" class="form" action="/check-for-help-paying-nhs-costs/start">
+    <div class="column-two-thirds">
+      <h1 class="heading-large" id="question-heading">
+        <span class="heading-secondary">Based on what you've told us</span>
+        You could apply online for help with NHS costs
+      </h1>
+      <p class="lede">This is a new online service and we're only inviting a limited number of people to apply.</p>
+      <p>If you apply online you will:</p>
+      <ul class="list list-bullet">
+        <li>complete your application in around 20 minutes</li>
+        <li>be asked personalised questions based on your circumstances</li>
+        <li>get instant confirmation that we've received your application</li>
+        <li>get a reference number that you can use if you have any queries</li>
+      </ul>
+
+      <div role="note" aria-label="Information">
+        <div class="callout form-group">
+          <h2 class="heading-small">How we use your information</h2>
+          <p>
+            If you apply online, we'll use the information you have already provided to help complete your application form. You can find out more about <a target="_blank" rel="noopener" href="https://www.nhsbsa.nhs.uk/nhs-low-income-scheme/nhs-low-income-scheme-privacy-notice">how we use your information<span class="visuallyhidden"> (Opens in a new window)</span></a>.
+          </p>
+        </div>
+      </div>
+      <h2 class="heading-medium">Do you want to apply online?</h2>
+
+      <fieldset class="inline">
+        <legend tabindex="-1" class="visuallyhidden">Do you want to apply online?</legend>
+        <div class="multiple-choice">
+          <input id="kickouts-isapplyonline-true" type="radio" value="true" name="kickouts.isApplyOnline">
+          <label id="label-radio-yes-true" for="kickouts-isapplyonline-true">
+            Yes
+          </label>
+        </div>
+        
+        <div class="multiple-choice">
+          <input id="kickouts-isapplyonline-false" type="radio" value="false" name="kickouts.isApplyOnline">
+          <label id="label-radio-no-false" for="kickouts-isapplyonline-false">
+            No
+          </label>
+        </div>
+      </fieldset>
+
+
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button button-get-started" type="submit" value="Start" id="next-button" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
