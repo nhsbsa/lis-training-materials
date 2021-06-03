@@ -1138,12 +1138,12 @@ button:active {
 .icon-important {
   width: 35px;
   height: 35px;
-  background-image: url("/apply-for-help-with-nhs-costs/webjars/nhs-template/1.0.22954/images/icon-important-29736daac7939ca56a4cc8fb70f07aa7.png");
+  background-image: url("/images/icon-important.png");
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-important {
-    background-image: url("/apply-for-help-with-nhs-costs/webjars/nhs-template/1.0.22954/images/icon-important-2x-ea5c78c0087da8fb33a666da12281798.png");
+    background-image: url("/images/icon-important.png");
     background-size: 100%;
   }
 }

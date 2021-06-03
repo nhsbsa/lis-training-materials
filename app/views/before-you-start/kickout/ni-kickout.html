@@ -1,0 +1,28 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Apply offline - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large" id="question-heading">
+        <!-- <span class="heading-secondary">Based on what you've told us</span> -->
+        You cannot use this service because you live in Northern Ireland
+      </h1>
+      <p>You can find information about getting help with health costs at <a target="_blank" rel="noopener" href="https://www.nidirect.gov.uk/articles/help-health-costs">NIdirect.gov.uk</a>.
+      </p>
+    </div>
+  </div>
+{% endblock %}

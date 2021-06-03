@@ -1,0 +1,28 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Apply offline - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large" id="question-heading">
+        <!-- <span class="heading-secondary">Based on what you've told us</span> -->
+        Use our paper form to apply
+      </h1>
+      <p>You can apply using a paper form called an HC1.</p>
+      <p>Find out <a href="https://www.nhsbsa.nhs.uk/nhs-low-income-scheme">how to get an HC1 application form</a>.</p>
+    </div>
+  </div>
+{% endblock %}

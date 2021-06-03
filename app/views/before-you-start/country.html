@@ -1,0 +1,65 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Which country do you live in? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Before you start</span>
+      Which country do you live in?
+    </h1>
+    
+    <div class="form-group">
+      <form action="country-handler" method="get" class="form">
+        <fieldset>
+          <legend tabindex="-1" class="visuallyhidden">Which country do you live in?</legend>
+          <div class="inline-form-groups">           
+            <div class="multiple-choice">
+              <input id="country-england" type="radio" value="England" name="country">
+              <label for="country-england">
+                England
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="country-wales" type="radio" value="Wales" name="country">
+              <label for="country-wales">
+                Wales
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="country-scotland" type="radio" value="Scotland" name="country">
+              <label for="country-scotland">
+                Scotland
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="country-northern-ireland" type="radio" value="Northern Ireland" name="country">
+              <label for="country-northern-ireland">
+                Northern Ireland
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-item-wrapper">
+          <div class="form-group">
+            <input class="button" type="submit" value="Next" id="next-button" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

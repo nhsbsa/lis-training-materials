@@ -60,10 +60,6 @@
     <link media="screen" rel="stylesheet" href="/css/app-extended.css" />
     <link media="screen" rel="stylesheet" href="/css/yaff.css" />
 
-    <script src="/javascript/app-extended.js"></script>
-    <script src="/javascript/application.js"></script>
-    <script src="/javascript/govuk.js"></script>
-
     {% block headIcons %}
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
@@ -113,6 +109,12 @@
         <!-- <div class="nhsuk-width-container {{ containerClasses }}"> -->
           {% block outerContent %}{% endblock %}
           <main id="content" role="main">
+            <div class="noprint phase-banner">
+              <p><strong class="phase-tag">BETA</strong>
+                This is a new service - your <a href="http://www.snapsurveys.com/wh/s.asp?k=151924339509&amp;pid=ApplyForHelpBanner" target="_blank" rel="noopener">feedback<span class="visuallyhidden"> (opens in a new window)</span></a> will help us to improve it.
+              </p>
+            </div>
+            <a href="javascript:history.go(-1)" id="back-button" value="Back" class="link-back">Back</a>
             {% block content %}{% endblock %}
           </main>
         <!-- </div> -->
