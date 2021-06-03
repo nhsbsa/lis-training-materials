@@ -56,3 +56,11 @@ router.get(/carehome-handler/, function (req, res) {
     res.redirect('/before-you-start/partner');
   }
 });
+
+router.get(/councilpay-handler/, function (req, res) {
+  if (req.query.councilpay == 'yes') {
+    res.redirect('/before-you-start/council-name');
+  } else if (req.query.councilpay == 'no') {
+    res.redirect('/before-you-start/kickout/not-yet');
+  }
+});
