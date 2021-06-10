@@ -1,0 +1,56 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  What was the decision of your asylum application? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Before you start</span>
+      What was the decision of your asylum application?
+    </h1>
+    <form action="asylumdecision-handler" method="get" class="form">
+      <fieldset>
+        <legend tabindex="-1" class="visuallyhidden">What was the decision of your asylum application?</legend>
+        <div class="inline-form-groups">           
+          <div class="multiple-choice" style="margin-bottom:20px">
+            <input id="household-asylumdecision-waiting" type="radio" value="WAITING" name="asylumdecision">
+            <label for="household-asylumdecision-waiting">
+              Still waiting for asylum decision or the outcome of an appeal
+            </label>
+          </div>
+          <div class="multiple-choice" style="margin-bottom:20px">
+            <input id="household-asylumdecision-allowed" type="radio" value="ALLOWED" name="asylumdecision">
+            <label for="household-asylumdecision-allowed">
+              Given permission to stay
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="household-asylumdecision-refused" type="radio" value="REFUSED" name="asylumdecision">
+            <label for="household-asylumdecision-refused">
+              Refused permission to stay
+            </label>
+          </div> 
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

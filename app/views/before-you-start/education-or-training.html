@@ -4,7 +4,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Do you live with a partner? - LIS training - NHSBSA
+Are you in education or training? - LIS training - NHSBSA
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -19,21 +19,20 @@
   <div class="column-two-thirds">
     <h1 class="heading-large" id="question-heading">
       <span class="heading-secondary">Before you start</span>
-      Do you live with a partner?
+      Are you in education or training?
     </h1>
-    <p>This means you live together as a couple, you don't have to be married or in a civil partnership.</p>
-    <form action="/before-you-start/claimed-asylum" method="get" class="form">
+    <form action="education-handler" method="get" class="form">
       <fieldset class="inline">
-        <legend tabindex="-1" class="visuallyhidden">Do you live with a partner?</legend>
+        <legend tabindex="-1" class="visuallyhidden">Are you in education or training?</legend>
         <div class="multiple-choice">
-          <input id="yes" type="radio" name="applyonline" value="yes">
+          <input id="yes" type="radio" name="educationtraining" value="yes">
           <label for="yes">
             Yes
           </label>
         </div>
         
         <div class="multiple-choice">
-          <input id="no" type="radio" name="applyonline" value="no">
+          <input id="no" type="radio" name="educationtraining" value="no">
           <label for="no">
             No
           </label>

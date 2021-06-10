@@ -448,7 +448,7 @@ element.style {
 }
 
 .form-hint-list-item--valid .form-hint-list-item__indicator {
-    background-image: url("/apply-for-help-with-nhs-costs/images/tick-green-8a868eb1bca9194aebb3452623c00349.svg");
+    background-image: url("/images/tick-green.svg");
 }
 
 .form-hint-list-item--false {
@@ -456,7 +456,7 @@ element.style {
 }
 
 .form-hint-list-item--false .form-hint-list-item__indicator {
-    background-image: url("/apply-for-help-with-nhs-costs/images/cross-red-36c14c075e39043416c23ee3e49c0d24.svg");
+    background-image: url("/images/cross-red.svg");
 }
 
 .form-hint-list-item__primary {

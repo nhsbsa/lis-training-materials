@@ -61,6 +61,38 @@ router.get(/councilpay-handler/, function (req, res) {
   if (req.query.councilpay == 'yes') {
     res.redirect('/before-you-start/council-name');
   } else if (req.query.councilpay == 'no') {
-    res.redirect('/before-you-start/kickout/not-yet');
+    res.redirect('/before-you-start/kickout/council-kickout');
+  }
+});
+
+router.get(/asylum-handler/, function (req, res) {
+  if (req.query.asylum == 'yes') {
+    res.redirect('/before-you-start/asylum-decision');
+  } else if (req.query.asylum == 'no') {
+    res.redirect('/before-you-start/education-or-training');
+  }
+});
+
+router.get(/asylumdecision-handler/, function (req, res) {
+  if (req.query.asylumdecision == 'ALLOWED') {
+    res.redirect('/before-you-start/education-or-training');
+  } else {
+    res.redirect('/before-you-start/visa-support');
+  }
+});
+
+router.get(/visasupport-handler/, function (req, res) {
+  if (req.query.visasupport == 'yes') {
+    res.redirect('/before-you-start/full-exemption-asylum-decision');
+  } else {
+    res.redirect('/before-you-start/education-or-training');
+  }
+});
+
+router.get(/education-handler/, function (req, res) {
+  if (req.query.educationtraining == 'yes') {
+    res.redirect('/before-you-start/full-education');
+  } else {
+    res.redirect('/before-you-start/benefits');
   }
 });
