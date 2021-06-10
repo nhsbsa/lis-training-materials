@@ -96,3 +96,23 @@ router.get(/education-handler/, function (req, res) {
     res.redirect('/before-you-start/benefits');
   }
 });
+
+router.get(/financialsupport-handler/, function (req, res) {
+  if (req.query.financialsupport == 'studentfinance') {
+    res.redirect('/before-you-start/live-with');
+  } else if (req.query.financialsupport == 'family') {
+    res.redirect('/before-you-start/live-with'); 
+  } else if (req.query.financialsupport == 'no') {
+    res.redirect('/before-you-start/live-with'); 
+  } else {
+    res.redirect('/before-you-start/kickout/cant-yet');
+  }
+});
+
+router.get(/livewith-handler/, function (req, res) {
+  if (req.query.livewith == 'yes') {
+    res.redirect('/before-you-start/benefits');
+  } else {
+    res.redirect('/before-you-start/kickout/cant-yet');
+  }
+});

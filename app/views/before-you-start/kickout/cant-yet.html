@@ -1,0 +1,33 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+You cannot use this service because you live in Northern Ireland - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">You can't apply online yet</h1>
+      
+      <h2 class="heading-medium">This service is still being developed</h2>
+      
+      <p>Based on your circumstances, you can't apply online yet.</p>
+          
+      <p>Instead, you can apply using a paper form called an HC1. Find out <a href="https://www.nhsbsa.nhs.uk/nhs-low-income-scheme" target="_blank" rel="noopener">how to get an application form<span class="visuallyhidden"> (opens in a new tab)</span></a>.</p>
+      
+      <div class="panel panel-border-wide">
+        If you're aged 18 and under and in full-time education, you are already entitled to full help with your health costs and you do not need to apply for this scheme. For more information, <a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/free-nhs-prescriptions" target="_blank" rel="noopener">visit our site<span class="visuallyhidden"> (opens in a tab)</span></a>.
+      </div>
+    </div>
+  </div>
+{% endblock %}

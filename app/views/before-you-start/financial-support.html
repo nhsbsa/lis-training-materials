@@ -21,24 +21,67 @@ Do you get financial support from any of these? - LIS training - NHSBSA
       <span class="heading-secondary">Before you start</span>
       Do you get financial support from any of these?
     </h1>
-    <form action="/before-you-start/financial-support" method="get" class="form">
+    <form action="financialsupport-handler" method="get" class="form">
       <fieldset>
         <legend tabindex="-1" class="visuallyhidden">
           Do you get financial support from any of these?
         </legend>
         <div class="block-form-groups">           
           <div class="multiple-choice" style="margin-bottom:20px; display:block">
-            <input id="household-asylumdecision-waiting" type="radio" value="full" name="fulleducation">
-            <label for="household-asylumdecision-waiting">
-              Full-time education
+            <input id="option-1" type="checkbox" value="studentfinance" name="financialsupport">
+            <label for="option-1">
+              Support from Student Finance England (SFE), Student Finance Wales (SFW), or the Student Awards Agency for Scotland (SAAS)
             </label>
           </div>
         </div>
         <div class="block-form-groups"> 
           <div class="multiple-choice" style="margin-bottom:20px; display:block;">
-            <input id="household-asylumdecision-allowed" type="radio" value="part" name="fulleducation">
-            <label for="household-asylumdecision-allowed">
-              Part-time education
+            <input id="option-2" type="checkbox" value="bursary" name="financialsupport">
+            <label for="option-2">
+              NHS Bursary
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-3" type="checkbox" value="hei" name="financialsupport">
+            <label for="option-3">
+              Bursary from your higher education institution (HEI)
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-4" type="checkbox" value="other" name="financialsupport">
+            <label for="option-4">
+              Other scholarship, sponsorship, award or bursary
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-5" type="checkbox" value="overseas" name="financialsupport">
+            <label for="option-5">
+              Grant or loan from overseas
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-6" type="checkbox" value="family" name="financialsupport">
+            <label for="option-6">
+              Family or friends
+            </label>
+          </div>
+        </div>
+        <div class="option-text">
+          or
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-7" type="checkbox" value="no" name="financialsupport">
+            <label for="option-7">
+              No, I do not get financial support from any of these
             </label>
           </div>
         </div>
