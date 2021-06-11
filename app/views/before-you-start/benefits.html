@@ -1,0 +1,114 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Before you start</span>
+      Do you get money from any of these?
+    </h1>
+    <form action="money-handler" method="get" class="form">
+      <fieldset>
+        <legend tabindex="-1" class="visuallyhidden">
+          Do you get money from any of these?
+        </legend>
+        <div class="block-form-groups">           
+          <div class="multiple-choice" style="margin-bottom:20px; display:block">
+            <input id="option-1" type="checkbox" value="pensions" name="benefits">
+            <label for="option-1">
+              Pensions (state, work, private)
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-2" type="checkbox" value="benefits" name="benefits">
+            <label for="option-2">
+              Benefits
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-3" type="checkbox" value="wages" name="benefits">
+            <label for="option-3">
+              Wages from a job
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-4" type="checkbox" value="self" name="benefits">
+            <label for="option-4">
+              Self-employment
+              <span style="display:block;">(includes subcontractors & directors of limited companies)</span>
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-5" type="checkbox" value="apprentice" name="benefits">
+            <label for="option-5">
+              Apprenticeships
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-6" type="checkbox" value="maintenance" name="benefits">
+            <label for="option-6">
+              Maintenance payments from an ex-partner
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-6" type="checkbox" value="paternity" name="benefits">
+            <label for="option-7">
+              Statutory Maternity Pay or Statutory Paternity Pay
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-6" type="checkbox" value="trust" name="benefits">
+            <label for="option-8">
+              Trust funds
+            </label>
+          </div>
+        </div>
+        <div class="option-text">
+          or
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-7" type="checkbox" value="no" name="benefits">
+            <label for="option-9">
+              No, I do not get money from any of these
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

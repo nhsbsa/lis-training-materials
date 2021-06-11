@@ -1,0 +1,202 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Which country do you live in? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Apply for help with NHS costs</span>
+      Check your answers
+    </h1>
+    
+    <h2 class="heading-medium">Check eligibility</h2>
+    
+    <!-- answer to check -->
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Country you live in</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="country-england">England</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/country">
+              Change
+              <span class="visuallyhidden">which country you live in</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">           
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Live permanently in a care home</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-incarehome-false">No</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/permanent-care-home">Change
+              <span class="visuallyhidden">
+              if you live permanently in a care home
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Live with a partner</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-haspartner-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/live-with-partner">Change
+              <span class="visuallyhidden">
+                if you live with a partner.
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Claimed asylum</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-hasclaimedasylum-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/claimed-asylum">Change
+              <span class="visuallyhidden">
+                if you have claimed asylum to stay in the UK.
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">In education or training</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-haseducationortraining-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/education-or-training">Change
+              <span class="visuallyhidden">
+                if you are in education or training
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Get money from</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="beneficiary-incomesources-none">
+            No, I do not get money from any of these
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/money-coming-in">Change
+              <span class="visuallyhidden">
+                how you have money coming in
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Have more than £6,000 in savings</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-hassavings-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/apply-for-help-with-nhs-costs/more-than-6000">Change
+              <span class="visuallyhidden">
+                if you have more than £6,000.
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="form-item-wrapper">
+      <div class="form-group">
+        <input class="button" type="submit" value="Next" id="next-button" />
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+        
+      
+{% endblock %}

@@ -116,3 +116,25 @@ router.get(/livewith-handler/, function (req, res) {
     res.redirect('/before-you-start/kickout/cant-yet');
   }
 });
+
+router.get(/money-handler/, function (req, res) {
+  if (req.query.benefits == 'pensions') {
+    res.redirect('/before-you-start/more-than-6000');
+  } else if (req.query.benefits == 'benefits') {
+    res.redirect('/before-you-start/more-than-6000'); 
+  } else if (req.query.benefits == 'wages') {
+    res.redirect('/before-you-start/more-than-6000'); 
+  } else if (req.query.benefits == 'no') {
+    res.redirect('/before-you-start/more-than-6000'); 
+  } else {
+    res.redirect('/before-you-start/kickout/cant-yet');
+  }
+});
+
+router.get(/6000handler/, function (req, res) {
+  if (req.query.livewith == 'yes') {
+    res.redirect('/before-you-start/cant-yet');
+  } else {
+    res.redirect('/before-you-start/check-your-answers');
+  }
+});

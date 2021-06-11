@@ -1,0 +1,49 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Do you live with a partner? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Before you start</span>
+      Do you have more than £6,000 in savings, investments or property?
+    </h1>
+    <p>Do not include the property you live in.</p>
+    <form action="6000handler" method="get" class="form">
+      <fieldset class="inline">
+        <legend tabindex="-1" class="visuallyhidden">Do you have more than £6,000 in savings, investments or property?</legend>
+        <div class="multiple-choice">
+          <input id="yes" type="radio" name="savings" value="yes">
+          <label for="yes">
+            Yes
+          </label>
+        </div>
+        <div class="multiple-choice">
+          <input id="no" type="radio" name="savings" value="no">
+          <label for="no">
+            No
+          </label>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
