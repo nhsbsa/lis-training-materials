@@ -1,0 +1,75 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Are you applying for you or someone else? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="/personal-details/name" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Personal details</span>
+            Are you applying for you or someone else?
+          </h1>
+        </legend>
+        <div class="inline-form-groups">           
+          <div class="multiple-choice" style="margin-bottom:20px">
+            <input id="household-asylumdecision-waiting" type="radio" value="WAITING" name="asylumdecision">
+            <label for="household-asylumdecision-waiting">
+              Myself
+            </label>
+          </div>
+          <div class="multiple-choice" style="margin-bottom:20px">
+            <input id="household-asylumdecision-allowed" type="radio" value="ALLOWED" name="asylumdecision">
+            <label for="household-asylumdecision-allowed">
+              Someone else
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <details class="noprint mb" role="group">
+        <summary role="button" aria-controls="reveal-1" aria-expanded="false">
+	        <span class="summary">When can I apply for someone else?</span>
+        </summary>
+        <div class="panel panel-border-narrow" id="reveal-1" aria-hidden="true">
+          <h2 class="heading-small">If you're responsible for their financial affairs</h2>
+          <p>You can complete the form on behalf of someone else if you are responsible for their financial affiars because they have either:</p>
+          <ul class="list list-bullet">
+            <li>learning difficulties</li>
+				    <li>a condition which prevents them from managing their own affairs</li>
+          </ul>
+          <div class="noprint notice form-group">
+	          <i class="icon icon-important" style="top:0">
+	            <span class="visually-hidden">Warning</span>
+	          </i>
+	          <strong class="bold-small"> 
+              <p>You are responsible for making sure the information entered is correct and complete.</p>
+            </strong>
+          </div>
+          <h2 class="heading-small">If you're just helping to complete the form</h2>
+			    <p>You should select the ‘myself' option.</p>
+          <p>You can help to complete the form, but they are responsible for the information given.</p>
+        </div>
+      </details>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

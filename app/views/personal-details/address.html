@@ -1,0 +1,73 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What is your address? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="/personal-details/nhs-number" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Personal details</span>
+            What is your address?
+          </h1>
+        </legend>
+        <div class="form-group">
+          <label for="household-address-line1" id="label-address-line1" class="form-label">
+            Address line 1
+          </label>
+          <input class="form-control " type="text" id="household-address-line1" value="">
+        </div>
+        <div class="form-group">
+          <label for="household-address-line2" id="label-address-line2" class="form-label">
+            Address line 2
+          </label>
+          <input class="form-control" type="text" id="household-address-line2" value="">
+        </div>
+        <div class="form-group">
+          <label for="household-address-towncity" id="label-address-towncity" class="form-label">
+            Town or city
+          </label>
+          <input class="form-control" type="text" id="household-address-towncity" value="">
+        </div>
+        <div class="form-group">
+          <label for="household-address-postcode" id="label-address-postcode" class="form-label">
+            Postcode
+          </label>
+          <input class="form-control" type="text" id="household-address-postcode" value="">
+        </div>
+      </fieldset>
+      <details class="noprint mb" role="group">
+        <summary role="button" aria-controls="reveal-1" aria-expanded="false">
+	        <span class="summary">I don't know what address to use</span>
+        </summary>
+        <div class="panel panel-border-narrow" id="reveal-1" aria-hidden="true">
+          <h2 class="heading-small">If you have more than one address</h2>
+          <p>You should use the address that your GP or dentist holds for you.  For example, if you're a student living away from home, this could be your home or term time address.</p>
+          
+          <h2 class="heading-small">If you don't have a permanent address</h2>
+          <p>If you're homeless and living in temporary accommodation (for example, a long term hostel), you should use the address that your GP or dentist holds for you.</p>
+        </div>
+      </details>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
