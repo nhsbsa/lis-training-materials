@@ -1,0 +1,155 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Check your answers - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Apply for help with NHS costs</span>
+      Check your answers
+    </h1>
+    
+    <h2 class="heading-medium">Personal details</h2>
+    
+    <!-- answer to check -->
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Full name</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="country-england">Jo Test</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/before-you-start/country">
+              Change
+              <span class="visuallyhidden">Full name</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">           
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Date of birth</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-incarehome-false">01 January 1980</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/before-you-start/care-home">Change
+              <span class="visuallyhidden">
+                Date of birth
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Address</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <div>
+            <span class="content-wrapper" id="household-address">
+              <span class="single-line-answer">152 Pilgrim Street</span>   
+              <span class="single-line-answer">Newcastle</span> 
+              <span class="single-line-answer">NE1 6SN</span>  
+            </span> 
+          </div>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/before-you-start/partner">Change
+              <span class="visuallyhidden">
+                Address
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">NHS Number</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-hasclaimedasylum-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/before-you-start/claimed-asylum">Change
+              <span class="visuallyhidden">
+                NHS Number
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Blind or severely sight impaired</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-haseducationortraining-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/before-you-start/education-or-training">Change
+              <span class="visuallyhidden">
+                Blind or severely sight impaired
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="form-item-wrapper">
+      <div class="form-group">
+        <a class="button" href="/personal-details/application-progress" id="next-button">Next</a>
+      </div>
+    </div>
+  </div>
+</div>
+       
+{% endblock %}

@@ -1,0 +1,79 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Check your answers - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Apply for help with NHS costs</span>
+      Check your answers
+    </h1>
+    
+    <h2 class="heading-medium">Personal details</h2>
+    
+    <!-- answer to check -->
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Telephone number</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="country-england">078731236782</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/contact-details/tel-no">
+              Change
+              <span class="visuallyhidden">Telephone number</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">           
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Email address</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-incarehome-false">jo.test@hotmail.com</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/contact-details/email">Change
+              <span class="visuallyhidden">
+                Email
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="form-item-wrapper">
+      <div class="form-group">
+        <a class="button" href="/contact-details/application-progress" id="next-button">Next</a>
+      </div>
+    </div>
+  </div>
+</div>
+       
+{% endblock %}

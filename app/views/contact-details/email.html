@@ -1,0 +1,48 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What is your email address? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="/contact-details/check-your-answers" method="get" class="form">
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Contact details</span>
+            What is your email address?
+          </h1>
+        </legend>
+        <p>You can give a mobile or landline number.</p>
+        <div class="form-group">
+          <label for="tel-no" id="label-name-first" class="form-label">
+            Email address
+            <p class="form-hint">For example, myname@example.com</p>
+          </label>
+            
+          <input class="form-control" type="text" id="tel-no" value="">
+        </div>
+      </fieldset>
+   
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+          <a href="/contact-details/check-your-answers" style="margin-left: 30px;">I don't have a telephone number</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

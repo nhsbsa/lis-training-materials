@@ -1,0 +1,50 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Are you severely sight impaired or registered blind? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="/personal-details/check-your-answers" method="get" class="form">
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Personal details</span>
+            Are you severely sight impaired or registered blind?
+          </h1>
+        </legend>
+        <div class="multiple-choice">
+          <input id="yes" type="radio" name="educationtraining" value="yes">
+          <label for="yes">
+            Yes
+          </label>
+        </div>
+        
+        <div class="multiple-choice">
+          <input id="no" type="radio" name="educationtraining" value="no">
+          <label for="no">
+            No
+          </label>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
