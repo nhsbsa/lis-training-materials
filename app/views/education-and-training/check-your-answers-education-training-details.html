@@ -1,0 +1,296 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What are you studying at Northumbria University? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <form action="/education-and-training/check-your-answers-education-training-details" method="get" class="form">
+            <fieldset class="inline">
+                <legend>
+                    <h1 class="heading-large" id="question-heading">
+                        <span class="heading-secondary">Education and training</span>
+                        Are you in the final year or only year of your course?
+                    </h1>
+                </legend>
+                <h2 class="heading-medium">
+                    Education and training details
+                </h2>
+                <span></span>
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            Name of school, college or university
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <span id="content-beneficiary-education-nameofestablishment">
+                                <span>Northumbria University</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/name-of-establishment">Change
+                                    <span class="visuallyhidden">
+                                        The name of your school, college or university
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            Name of course being studied
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <span id="content-beneficiary-education-nameofcourse">
+                                <span>Maths</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/name-of-course">Change
+                                    <span class="visuallyhidden">
+                                        The name of your course
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            Overseas student
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <div>
+                                <div class="form-answer">
+                                    <span id="beneficiary-education-isoverseasstudent-true">
+                                        Yes
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/overseas-student">Change
+                                    <span class="visuallyhidden">
+                                        if you are an overseas student
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            Standard 3 term course
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <div>
+                                <div class="form-answer">
+                                    <span id="beneficiary-education-threeterms-true">
+                                        Yes
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/how-many-terms">Change
+                                    <span class="visuallyhidden">
+                                        if your course has 3 terms this academic year
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            First term dates
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <span class="single-line-answer">
+                                Start date:
+                                <span class="date-answer" id="beneficiary-education-firsttermdatestartdate">01 January
+                                    2020</span>
+                            </span>
+                            <span class="single-line-answer">
+                                End date:
+                                <span class="date-answer" id="beneficiary-education-firsttermdateenddate">20 December
+                                    2020</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/first-term-dates">Change
+                                    <span class="visuallyhidden">
+                                        First term dates
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            Second term dates
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <span class="single-line-answer">
+                                Start date:
+                                <span class="date-answer" id="beneficiary-education-secondtermdatestartdate">13 January
+                                    2021</span>
+                            </span>
+                            <span class="single-line-answer">
+                                End date:
+                                <span class="date-answer" id="beneficiary-education-secondtermdateenddate">27 March
+                                    2021</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/second-term-dates">Change
+                                    <span class="visuallyhidden">
+                                        Second term dates
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            Third term dates
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <span class="single-line-answer">
+                                Start date:
+                                <span class="date-answer" id="beneficiary-education-thirdtermdatestartdate">20 April
+                                    2021</span>
+                            </span>
+                            <span class="single-line-answer">
+                                End date:
+                                <span class="date-answer" id="beneficiary-education-thirdtermdateenddate">05 June
+                                    2021</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/third-term-dates">Change
+                                    <span class="visuallyhidden">
+                                        Third term dates
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+                <span></span>
+                <!-- answer to check -->
+                <div class="grid-row">
+                    <div class="column-one-third">
+                        <h2 class="heading-small">
+                            In the final year or only year of course
+                        </h2>
+                    </div>
+                    <div class="column-answer column-one-third section">
+                        <span class="visuallyhidden">Answer</span>
+                        <div>
+                            <div>
+                                <div class="form-answer">
+                                    <span id="beneficiary-education-infinaloronlyyear-true">
+                                        Yes
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-change column-one-third section">
+                        <div class="group">
+                            <span class="change">
+                                <a href="/education-and-training/course-final-year">Change
+                                    <span class="visuallyhidden">
+                                        if you are in the final year or only year of your course
+                                    </span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-margin">
+            </fieldset>
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <input class="button" type="submit" value="Next" id="next-button" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
