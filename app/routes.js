@@ -156,9 +156,25 @@ router.get(/uc-handler/, function (req, res) {
 });
 
 router.get(/uc-award/, function (req, res) {
-  if (req.query.uccredit == 'yes') {
+  if (req.query.ucextra == 'yes') {
     res.redirect('/benefits/uc-935');
   } else {
     res.redirect('/benefits/uc-435');
+  }
+});
+
+router.get(/uc-nine/, function (req, res) {
+  if (req.query.ucnine == 'yes') {
+    res.redirect('/benefits/done');
+  } else {
+    res.redirect('/benefits/benefit-income');
+  }
+});
+
+router.get(/uc-four/, function (req, res) {
+  if (req.query.ucfour == 'yes') {
+    res.redirect('/benefits/done');
+  } else {
+    res.redirect('/benefits/benefit-income');
   }
 });
