@@ -1,0 +1,847 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Was your take-home pay for your last Universal Credit period £435 or less? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="uc-award" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Benefits</span>
+            Was your take-home pay for your last Universal Credit period £435 or less?
+          </h1>
+        </legend>
+        <p>We will only ask about benefits that can affect the outcome of your application.</p>
+        <div id="accordion">
+          <fieldset>
+            <legend tabindex="-1" class="visuallyhidden">
+              <span>
+                Do you get any of these benefits?
+              </span>
+            </legend>
+            <p class="accordion-expand-holder">
+              Select all that apply
+              <a class="accordion-expand-all" data-is-all-open="true" href="#" style="display: inline;">Hide all</a>
+            </p>
+            <div class="subsection-wrapper">
+              <ul class="list-expand">
+                <li>
+                  <h2 class="accordion-header">
+                    <button class="list-button">
+                      <span class="plusminus" aria-hidden="true">-</span>
+                      <span class="button-text">
+                        Unemployment benefits
+                      </span>
+                      <span class="showhide" style="display: block;">Hide</span>
+                    </button>
+                  </h2>
+                </li>
+              </ul>
+              <div class="ui-accordion-content accordian">
+                <div>
+                  <fieldset>
+                    <legend tabindex="-1" class="visuallyhidden">
+                      <span>
+                        Unemployment benefits
+                      </span>
+                    </legend>
+                    
+
+                    <div class="inline-form-groups form-group">
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-jobseekers-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-jobseekers-allowance" type="checkbox"
+                          value="JOBSEEKERS_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-jobseekers-allowance"
+                          for="beneficiary-income-benefits-benefits-jobseekers-allowance">
+
+
+                          Jobseeker's Allowance (JSA)
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                  </fieldset>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="subsection-wrapper">
+              <ul class="list-expand">
+                <li>
+                  <h2 class="accordion-header">
+                    <button class="list-button">
+                      <span class="plusminus" aria-hidden="true">-</span>
+                      <span class="button-text">
+                        Disability, illness and carer benefits
+                      </span>
+                      <span class="showhide" style="display: block;">Hide</span>
+                    </button>
+                  </h2>
+                </li>
+              </ul>
+              <div class="ui-accordion-content accordian">
+
+                <div>
+                  <div>
+
+                  </div>
+
+                  <fieldset>
+
+
+                    <legend tabindex="-1" class="visuallyhidden">
+
+
+
+
+                      <span>
+
+                        Disability, illness and carer benefits
+
+                      </span>
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+
+                    <div class="inline-form-groups form-group">
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-employment-support-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-employment-support-allowance" type="checkbox"
+                          value="EMPLOYMENT_SUPPORT_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-employment-support-allowance"
+                          for="beneficiary-income-benefits-benefits-employment-support-allowance">
+
+
+                          Employment and Support Allowance (ESA)
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-personal-independence-payment-nested"
+                          id="beneficiary-income-benefits-benefits-personal-independence-payment" type="checkbox"
+                          value="PERSONAL_INDEPENDENCE_PAYMENT" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-personal-independence-payment"
+                          for="beneficiary-income-benefits-benefits-personal-independence-payment">
+
+
+                          Personal Independence Payment (PIP)
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-disability-living-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-disability-living-allowance" type="checkbox"
+                          value="DISABILITY_LIVING_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-disability-living-allowance"
+                          for="beneficiary-income-benefits-benefits-disability-living-allowance">
+
+
+                          Disability Living Allowance (DLA)
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-attendance-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-attendance-allowance" type="checkbox"
+                          value="ATTENDANCE_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-attendance-allowance"
+                          for="beneficiary-income-benefits-benefits-attendance-allowance">
+
+
+                          Attendance Allowance
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input
+                          data-target="beneficiary-income-benefits-benefits-industrial-injuries-disablement-benefit-nested"
+                          id="beneficiary-income-benefits-benefits-industrial-injuries-disablement-benefit"
+                          type="checkbox" value="INDUSTRIAL_INJURIES_DISABLEMENT_BENEFIT"
+                          name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-industrial-injuries-disablement-benefit"
+                          for="beneficiary-income-benefits-benefits-industrial-injuries-disablement-benefit">
+
+
+                          Industrial Injuries Disablement Benefit
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-carers-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-carers-allowance" type="checkbox"
+                          value="CARERS_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-carers-allowance"
+                          for="beneficiary-income-benefits-benefits-carers-allowance">
+
+
+                          Carer's Allowance<p class="hint-paragraph">This is different from the care component of DLA.
+                          </p>
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-incapacity-benefit-nested"
+                          id="beneficiary-income-benefits-benefits-incapacity-benefit" type="checkbox"
+                          value="INCAPACITY_BENEFIT" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-incapacity-benefit"
+                          for="beneficiary-income-benefits-benefits-incapacity-benefit">
+
+
+                          Incapacity Benefit
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-severe-disablement-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-severe-disablement-allowance" type="checkbox"
+                          value="SEVERE_DISABLEMENT_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-severe-disablement-allowance"
+                          for="beneficiary-income-benefits-benefits-severe-disablement-allowance">
+
+
+                          Severe Disablement Allowance
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                  </fieldset>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="subsection-wrapper">
+              <ul class="list-expand">
+                <li>
+                  <h2 class="accordion-header">
+                    <button class="list-button">
+                      <span class="plusminus" aria-hidden="true">-</span>
+                      <span class="button-text">
+                        Armed forces disability benefits
+                      </span>
+                      <span class="showhide" style="display: block;">Hide</span>
+                    </button>
+                  </h2>
+                </li>
+              </ul>
+              <div class="ui-accordion-content accordian">
+
+                <div>
+                  <div>
+
+                  </div>
+
+                  <fieldset>
+
+
+                    <legend tabindex="-1" class="visuallyhidden">
+
+
+
+
+                      <span>
+
+                        Armed forces disability benefits
+
+                      </span>
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+
+                    <div class="inline-form-groups form-group">
+
+                      <div class="multiple-choice group">
+                        <input
+                          data-target="beneficiary-income-benefits-benefits-armed-forces-independence-payment-nested"
+                          id="beneficiary-income-benefits-benefits-armed-forces-independence-payment" type="checkbox"
+                          value="ARMED_FORCES_INDEPENDENCE_PAYMENT" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-armed-forces-independence-payment"
+                          for="beneficiary-income-benefits-benefits-armed-forces-independence-payment">
+
+
+                          Armed Forces Independence Payment
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input
+                          data-target="beneficiary-income-benefits-benefits-armed-forces-compensation-scheme-nested"
+                          id="beneficiary-income-benefits-benefits-armed-forces-compensation-scheme" type="checkbox"
+                          value="ARMED_FORCES_COMPENSATION_SCHEME" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-armed-forces-compensation-scheme"
+                          for="beneficiary-income-benefits-benefits-armed-forces-compensation-scheme">
+
+
+                          Armed Forces Compensation Scheme
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-war-disablement-pension-nested"
+                          id="beneficiary-income-benefits-benefits-war-disablement-pension" type="checkbox"
+                          value="WAR_DISABLEMENT_PENSION" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-war-disablement-pension"
+                          for="beneficiary-income-benefits-benefits-war-disablement-pension">
+
+
+                          War Disablement Pension
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                  </fieldset>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="subsection-wrapper">
+              <ul class="list-expand">
+                <li>
+                  <h2 class="accordion-header">
+                    <button class="list-button">
+                      <span class="plusminus" aria-hidden="true">-</span>
+                      <span class="button-text">
+                        Death and bereavement benefits
+                      </span>
+                      <span class="showhide" style="display: block;">Hide</span>
+                    </button>
+                  </h2>
+                </li>
+              </ul>
+              <div class="ui-accordion-content accordian">
+
+                <div>
+                  <div>
+
+                  </div>
+
+                  <fieldset>
+
+
+                    <legend tabindex="-1" class="visuallyhidden">
+
+
+
+
+                      <span>
+
+                        Death and bereavement benefits
+
+                      </span>
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+
+                    <div class="inline-form-groups form-group">
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-bereavement-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-bereavement-allowance" type="checkbox"
+                          value="BEREAVEMENT_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-bereavement-allowance"
+                          for="beneficiary-income-benefits-benefits-bereavement-allowance">
+
+
+                          Bereavement Allowance (previously Widow's Pension)
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-widowed-parents-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-widowed-parents-allowance" type="checkbox"
+                          value="WIDOWED_PARENTS_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-widowed-parents-allowance"
+                          for="beneficiary-income-benefits-benefits-widowed-parents-allowance">
+
+
+                          Widowed Parent's Allowance
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-bereavement-support-payment-nested"
+                          id="beneficiary-income-benefits-benefits-bereavement-support-payment" type="checkbox"
+                          value="BEREAVEMENT_SUPPORT_PAYMENT" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-bereavement-support-payment"
+                          for="beneficiary-income-benefits-benefits-bereavement-support-payment">
+
+
+                          Bereavement Support Payment
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-war-widow-pension-nested"
+                          id="beneficiary-income-benefits-benefits-war-widow-pension" type="checkbox"
+                          value="WAR_WIDOW_PENSION" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-war-widow-pension"
+                          for="beneficiary-income-benefits-benefits-war-widow-pension">
+
+
+                          War Widow(er) Pension
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-industrial-death-benefit-nested"
+                          id="beneficiary-income-benefits-benefits-industrial-death-benefit" type="checkbox"
+                          value="INDUSTRIAL_DEATH_BENEFIT" name="beneficiary.income.benefits.benefits"><input
+                          type="hidden" name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-industrial-death-benefit"
+                          for="beneficiary-income-benefits-benefits-industrial-death-benefit">
+
+
+                          Industrial Death Benefit
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                  </fieldset>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="subsection-wrapper">
+              <ul class="list-expand">
+                <li>
+                  <h2 class="accordion-header">
+                    <button class="list-button">
+                      <span class="plusminus" aria-hidden="true">-</span>
+                      <span class="button-text">
+                        Maternity benefits
+                      </span>
+                      <span class="showhide" style="display: block;">Hide</span>
+                    </button>
+                  </h2>
+                </li>
+              </ul>
+              <div class="ui-accordion-content accordian">
+
+                <div>
+                  <div>
+
+                  </div>
+
+                  <fieldset>
+
+
+                    <legend tabindex="-1" class="visuallyhidden">
+
+
+
+
+                      <span>
+
+                        Maternity benefits
+
+                      </span>
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+                    <legend>
+
+
+
+
+
+                    </legend>
+
+                    <div class="inline-form-groups form-group">
+
+                      <div class="multiple-choice group">
+                        <input data-target="beneficiary-income-benefits-benefits-maternity-allowance-nested"
+                          id="beneficiary-income-benefits-benefits-maternity-allowance" type="checkbox"
+                          value="MATERNITY_ALLOWANCE" name="beneficiary.income.benefits.benefits"><input type="hidden"
+                          name="_beneficiary.income.benefits.benefits" value="on">
+                        <label id="label-radio-maternity-allowance"
+                          for="beneficiary-income-benefits-benefits-maternity-allowance">
+
+
+                          Maternity Allowance
+
+
+                        </label>
+                      </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                  </fieldset>
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+            <div class="none form-group">&nbsp;
+
+              <div>
+                <div>
+
+                </div>
+
+                <fieldset>
+
+
+                  <legend tabindex="-1" class="visuallyhidden">
+
+
+
+
+                    <span>
+
+                      Do you get any of these benefits?
+
+                    </span>
+
+
+                  </legend>
+                  <legend>
+
+
+
+
+
+                  </legend>
+                  <legend>
+
+
+
+
+
+                  </legend>
+
+                  <div class="inline-form-groups form-group">
+
+                    <div class="multiple-choice none">
+                      <input data-target="beneficiary-income-benefits-benefits-none-nested"
+                        id="beneficiary-income-benefits-benefits-none" type="checkbox" value="NONE"
+                        name="beneficiary.income.benefits.benefits"><input type="hidden"
+                        name="_beneficiary.income.benefits.benefits" value="on">
+                      <label id="label-radio-none" for="beneficiary-income-benefits-benefits-none">
+
+
+                        No, I <strong>do not</strong> get any of these benefits
+
+
+                      </label>
+                    </div>
+
+
+
+
+
+
+
+
+
+                  </div>
+                </fieldset>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+
+        <div class="form-item-wrapper">
+          <div class="form-group">
+
+            <input class="button" type="submit" value="Next" id="next-button"
+              onclick="this.disabled=true; this.form.submit();">
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+  </div>
+
+  </form>
+  <div class="form-item-wrapper">
+    <div class="form-group">
+      <input class="button" type="submit" value="Next" id="next-button" />
+    </div>
+  </div>
+  </form>
+</div>
+</div>
+{% endblock %}

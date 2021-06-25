@@ -138,3 +138,27 @@ router.get(/6000handler/, function (req, res) {
     res.redirect('/before-you-start/check-your-answers');
   }
 });
+
+router.get(/terms-handler/, function (req, res) {
+  if (req.query.academicTerms == 'yes') {
+    res.redirect('/education-and-training/first-term-dates');
+  } else {
+    res.redirect('/education-and-training/course-start');
+  }
+});
+
+router.get(/uc-handler/, function (req, res) {
+  if (req.query.uc == 'yes') {
+    res.redirect('/benefits/uc-credit-claim');
+  } else {
+    res.redirect('/benefits/somewhere-else');
+  }
+});
+
+router.get(/uc-award/, function (req, res) {
+  if (req.query.uccredit == 'yes') {
+    res.redirect('/benefits/uc-935');
+  } else {
+    res.redirect('/benefits/uc-435');
+  }
+});

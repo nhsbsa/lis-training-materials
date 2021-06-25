@@ -16,52 +16,40 @@ What are you studying at Northumbria University? - LIS training - NHSBSA
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="grid-row">
-    <div class="column-two-thirds">
-        <form>
-            <fieldset class="inline">
-                <legend>
-                    <h1 class="heading-large" id="question-heading">
-                        <span class="heading-secondary">Education and training</span>
-                        Does your course have 3 terms this academic year?
-                    </h1>
-                </legend>
-                <p>
-                    Terms are not the same as semesters.
-                </p>
-                <p>
-                    A list of term dates can usually be found online within the student portal or listed in the
-                    university or college’s academic calendar.
-                </p>
-                <div class="form-group">
-                    <fieldset class="inline">
-                        <legend tabindex="-1" class="visuallyhidden">
-                            <span>
-                                Does your course have 3 terms this academic year?
-                            </span>
-                        </legend>
-                        <div class="multiple-choice">
-                            <input data-target="beneficiary-education-threeterms-true-nested"
-                                id="beneficiary-education-threeterms-true" type="radio" value="true" name="academicTerms">
-                            <label id="label-radio-yes-true" for="beneficiary-education-threeterms-true">
-                                Yes
-                            </label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input data-target="beneficiary-education-threeterms-false-nested"
-                                id="beneficiary-education-threeterms-false" type="radio" value="false" name="academicTerms">
-                            <label id="label-radio-no-false" for="beneficiary-education-threeterms-false">
-                                No
-                            </label>
-                        </div>
-                    </fieldset>
-                </div>
-            </fieldset>
-            <div class="form-item-wrapper">
-                <div class="form-group">
-                    <a href="/education-and-training/first-term-dates" class="button" id="next-button">Next</a>
-                </div>
-            </div>
-        </form>
-    </div>
+	<div class="column-two-thirds">
+		<form action="terms-handler" method="get" class="form">
+			<fieldset class="inline">
+				<legend>
+					<h1 class="heading-large" id="question-heading">
+						<span class="heading-secondary">Education and training</span>
+						Does your course have 3 terms this academic year?
+					</h1>
+				</legend>
+				<p>Terms are not the same as semesters.</p>
+              
+				<p>A list of term dates can usually be found online within the student portal or listed in the university or college’s academic calendar.</p>
+				
+				<div class="form-group">
+					<div class="multiple-choice">
+						<input id="beneficiary-education-threeterms-true" type="radio" value="yes" name="academicTerms">
+						<label id="label-radio-yes-true" for="beneficiary-education-threeterms-true">
+							Yes
+						</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="beneficiary-education-threeterms-false" type="radio" value="no" name="academicTerms">
+						<label id="label-radio-no-false" for="beneficiary-education-threeterms-false">
+							No
+						</label>
+					</div>
+				</div>
+      </fieldset>
+			<div class="form-item-wrapper">
+				<div class="form-group">
+					<input class="button" type="submit" value="Next" id="next-button" />
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
 {% endblock %}

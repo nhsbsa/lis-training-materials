@@ -1,0 +1,84 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Was your take-home pay for your last Universal Credit period £435 or less? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="uc-award" method="get" class="form">
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Benefits</span>
+            Was your take-home pay for your last Universal Credit period £435 or less?
+          </h1>
+        </legend>
+        <details class="mb" role="group">
+          <summary role="button" aria-controls="universal-credit">
+            <span class="summary">
+              Where to find your take-home pay
+            </span>
+          </summary>
+          <div class="grid-row-full grid-row" id="universal-credit">
+            <div class="column-one-half image-border">
+              <h2 class="heading-medium heading-no-margin">
+                If you have a Universal Credit account online
+              </h2>
+              <div class="uc-statement">
+                <ol class="list list-number">
+                  <li>View your online Statement.</li>
+                  <li>Find the section under the heading 'Take-home pay'.</li>
+                  <li>Your take-home pay will be found next to the text <b>'Your total take-home pay for this period is £x.xx'</b>.</li>
+                </ol>
+                <div class="panel panel-border-wide">
+                  <p><b>Do not enter the total taken off your take-home pay</b></p>
+                </div>
+                <img src="/images/uc-statement-online.svg" alt="An image showing how to find your take-home pay on your online statement.">
+              </div>
+            </div>
+            <div class="column-one-half image-border">
+              <h2 class="heading-medium heading-no-margin">
+                If you get a monthly Universal Credit payment letter
+              </h2>
+              <div class="uc-statement">
+                <p>Your take-home pay is shown on your Universal Credit monthly payment letter.</p>
+                <p>It's usually on page 2 under the heading <b>'3. We then take account of your take-home pay'</b>.</p>
+                <img src="/images/uc-letter-statement.svg" alt="An image showing where to find your take-home pay on your Universal Credit monthly payment letter.">
+              </div>
+            </div>
+          </div>
+        </details>
+        <div class="multiple-choice">
+          <input id="yes" type="radio" name="uccredit" value="yes">
+          <label for="yes">
+            Yes
+          </label>
+        </div>
+        <div class="multiple-choice">
+          <input id="no" type="radio" name="uccredit" value="no">
+          <label for="no">
+            No
+          </label>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
