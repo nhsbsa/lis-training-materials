@@ -14,29 +14,29 @@ $(document).ready(function() {
     });
 });
 
-$(window).load(function () {
-	// Only set focus for the error example pages
-	// if ($('.js-error-example').length) {
-	// If there is an error summary, set focus to the summary
-	if ($('.error-summary').length) {
-		$('.error-summary').focus()
+// $(window).load(function () {
+// 	// Only set focus for the error example pages
+// 	// if ($('.js-error-example').length) {
+// 	// If there is an error summary, set focus to the summary
+// 	if ($('.error-summary').length) {
+// 		$('.error-summary').focus()
 
-		var id = $('.error-summary:first').attr('id');
-		if(id){
-			location.hash = "#" + id;
-		}
+// 		var id = $('.error-summary:first').attr('id');
+// 		if(id){
+// 			location.hash = "#" + id;
+// 		}
 
-		// $('.error-summary a').click(function (e) {
-		//   e.preventDefault()
-		//   var href = $(this).attr('href')
-		//   $(href).focus()
-		// })
-	} else {
-		// Otherwise, set focus to the field with the error
-		$('.error input:first').focus()
-	}
-	// }
-})
+// 		// $('.error-summary a').click(function (e) {
+// 		//   e.preventDefault()
+// 		//   var href = $(this).attr('href')
+// 		//   $(href).focus()
+// 		// })
+// 	} else {
+// 		// Otherwise, set focus to the field with the error
+// 		$('.error input:first').focus()
+// 	}
+// 	// }
+// })
 
 //Details contain links 
 //toggles tabindex on links when details opened
