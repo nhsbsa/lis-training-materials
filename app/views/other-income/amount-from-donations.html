@@ -1,0 +1,53 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Money from somewhere else</span>
+            How much (on average) do you spend from your savings each week?
+        </h1>
+        <div class="form-hint">
+            The amount must include pence. For example, £146.20
+        </div>
+        <div class="form-group">
+            <fieldset class="inline">
+                <legend tabindex="-1" class="visuallyhidden">
+                    <span>
+                        How much (on average) do you get in donations each week?
+                    </span>
+                </legend>
+                <div class="currency-input">
+                    <div class="currency-input-inner">
+                        <label for="household-donations-payment-amount" class="visually-hidden">
+                            amount
+                        </label>
+                        <span class="symbol">£</span>
+                        <input id="household-donations-payment-amount" class="currency-amount form-control" type="text"
+                            data-decimal="" name="household.donations.payment.amount.value" value="">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/other-income/check-your-answers-other-income" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

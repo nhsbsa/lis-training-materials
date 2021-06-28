@@ -1,0 +1,80 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Money from somewhere else</span>
+            How are you paying for things at the moment?
+        </h1>
+        <form>
+            <fieldset>
+                <legend tabindex="-1" class="visuallyhidden">
+                    <span>
+                        How are you paying for things at the moment?
+                    </span>
+                </legend>
+                <div class="inline-form-groups form-group">
+                    <div class="multiple-choice group">
+                        <input data-target="household-otherincomesources-friends-family-nested"
+                            id="household-otherincomesources-friends-family" type="checkbox" value="FRIENDS_FAMILY"
+                            name="household.otherIncomeSources"><input type="hidden"
+                            name="_household.otherIncomeSources" value="on">
+                        <label id="label-radio-friends-family" for="household-otherincomesources-friends-family">
+                            Money from friends or family
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="household-otherincomesources-savings-nested"
+                            id="household-otherincomesources-savings" type="checkbox" value="SAVINGS"
+                            name="household.otherIncomeSources"><input type="hidden"
+                            name="_household.otherIncomeSources" value="on">
+                        <label id="label-radio-savings" for="household-otherincomesources-savings">
+                            Savings
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="household-otherincomesources-donations-nested"
+                            id="household-otherincomesources-donations" type="checkbox" value="DONATIONS"
+                            name="household.otherIncomeSources"><input type="hidden"
+                            name="_household.otherIncomeSources" value="on">
+                        <label id="label-radio-donations" for="household-otherincomesources-donations">
+                            Donations from charity or voluntary organisations
+                        </label>
+                    </div>
+                    <div class="option-text">
+                        or
+                    </div>
+                    <div class="multiple-choice none">
+                        <input data-target="household-otherincomesources-none-nested"
+                            id="household-otherincomesources-none" type="checkbox" value="NONE"
+                            name="household.otherIncomeSources"><input type="hidden"
+                            name="_household.otherIncomeSources" value="on">
+                        <label id="label-radio-none" for="household-otherincomesources-none">
+                            None of these
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-item-wrapper">
+                <div class="form-group">
+                    <a href="/other-income/amount-from-savings" class="button" id="next-button">Next</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

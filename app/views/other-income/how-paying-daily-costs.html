@@ -1,0 +1,55 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div>
+            <span class="form-hint form-group-margin" id="question-hint">
+                Money from somewhere else
+            </span>
+            <h1 class="heading-large">
+                How are you paying your daily living costs?
+            </h1>
+            <div class="form-hint">
+                This might include paying for food, housing and travel. Tell us if someone else is providing these for
+                you.
+            </div>
+            <div class="form-group">
+                <fieldset class="inline group-margin">
+                    <legend tabindex="-1" class="visuallyhidden">
+                        <span>
+                            How are you paying your daily living costs?
+                        </span>
+                    </legend>
+                    <label for="household-dailycosts" class="visuallyhidden">
+                        How are you paying your daily living costs?
+                    </label>
+                    <textarea class="area-box form-control" name="household.dailyCosts" rows="6"
+                        id="household-dailycosts"></textarea>
+                    <span class="form-hint">You can enter up to <span>375</span> characters
+                    </span>
+                </fieldset>
+            </div>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/other-income/check-your-answers-other-income" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
