@@ -150,8 +150,10 @@ router.get(/terms-handler/, function (req, res) {
 router.get(/uc-handler/, function (req, res) {
   if (req.query.uc == 'yes') {
     res.redirect('/benefits/uc-credit-claim');
-  } else {
-    res.redirect('/benefits/somewhere-else');
+  } else if (req.query.uc == 'no') {
+    res.redirect('/benefits/tax-credits'); 
+  } else  {
+    res.redirect('/benefits/waiting-uc');
   }
 });
 
@@ -176,5 +178,29 @@ router.get(/uc-four/, function (req, res) {
     res.redirect('/benefits/done');
   } else {
     res.redirect('/benefits/benefit-income');
+  }
+});
+
+router.get(/tc-handler/, function (req, res) {
+  if (req.query.tc == 'yes') {
+    res.redirect('/benefits/tax-credits-type');
+  } else {
+    res.redirect('/benefits/income-support');
+  }
+});
+
+router.get(/is-handler/, function (req, res) {
+  if (req.query.is == 'yes') {
+    res.redirect('/benefits/done');
+  } else {
+    res.redirect('/benefits/benefit-income');
+  }
+});
+
+router.get(/tctype-handler/, function (req, res) {
+  if (req.query.tctype == 'own') {
+    res.redirect('/benefits/income-support');
+  } else {
+    res.redirect('hi-15');
   }
 });

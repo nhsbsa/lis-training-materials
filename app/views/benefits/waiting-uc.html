@@ -1,0 +1,42 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+While you're waiting on your Universal Credit decision - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="uc-handler" method="get" class="form">
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Benefits</span>
+            While you're waiting on your Universal Credit decision
+          </h1>
+        </legend>
+        <p>Until your first assessment period is complete, Universal Credit does not entitle you to help with NHS costs.</p>
+        
+        <p>If you need to pay for any NHS charges, for example, prescriptions or dental treatment, make sure you get a receipt and ask how to claim a refund.</p>
+        
+        <p>If you pay for a prescription, ask for a refund receipt called an FP57 when you pay - you cannot get one later. Find out more about <a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs" target="_blank" rel="noopener">refunds for NHS prescription charges<span class="visuallyhidden"> (opens in a new tab)</span></a>.</p>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <a class="button" href="/benefits/benefit-income" id="next-button">Next</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

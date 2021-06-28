@@ -1,0 +1,94 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Do you get support from UK Visas and Immigration (UKVI)? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="done-panel">
+      <h1 class="heading-xlarge done-panel">
+        <img alt="done" src="/images/done-tick.png">
+        Done
+      </h1>
+      <h2 class="heading-medium">
+        <span class="secondary-head">Based on what you've told us</span> You get help with NHS costs and do not need to apply
+      </h2>
+    </div>
+    <p class="lede">Because you get Income Support:</p>
+  
+    <ul class="form-hint-list">
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        NHS prescriptions
+      </li>
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        NHS dental check-ups and treatment
+      </li>
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        sight tests
+      </li>
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        NHS wigs and fabric supports
+      </li>
+    </ul>
+    
+    <h3 class="heading-medium">You get money off:</h3>
+  
+    <ul class="form-hint-list">
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        new glasses or contact lenses
+      </li>
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        repairing or replacing your glasses or contact lenses
+      </li>
+      <li class="form-hint-list-item form-hint-list-item--valid">
+        <span class="form-hint-list-item__indicator"></span>
+        travel for NHS treatment
+      </li>
+    </ul>
+    <div class="panel panel-border-wide">
+      Any children under 20 included on your Income Support claim are also entitled to the same help.
+    </div>
+    <hr />
+    <h2 class="heading-medium">How to get your help:</h2>
+    <p>In most cases, you do not have to do anything more, although you may have to show proof you get Income Support to your pharmacist, optician or dentist.</p>
+    <p>You can use your latest benefit letter or award notice as proof. If you have lost yours, <a href="https://www.gov.uk/contact-jobcentre-plus/existing-benefit-claims" target="_blank" rel="noopener">Jobcentre Plus helpline<span class="visuallyhidden"> (opens in a new tab)</span></a>.</p>
+    <h2 class="heading-small">Help with travel for NHS treatment</h2>
+    <p>Tell the hospital (or the place where you're getting treatment) that you want to claim back the cost of your journey. They'll tell you what you need to do.</p>
+
+    <p>You may need to show proof:</p>
+    <ul class="list-bullet">
+      <li>of your travel costs, for example, bus tickets</li>
+      <li>that you're entitled to help</li>
+    </ul>
+    <div class="noprint notice form-group">
+      <i class="icon icon-important">
+        <span class="visually-hidden">Warning</span>
+      </i>
+      <strong class="bold-small">
+        It's important that you know what benefit you get - you can get a penalty charge if you claim help with NHS costs and you're not entitled.
+      </strong>
+    </div>
+    <hr />
+    <h2 class="heading-medium">Feedback</h2>
+    <p><a href="http://www.snapsurveys.com/wh/s.asp?k=151924339509&amp;pid=ApplyForHelp;" target="_blank" rel="noopener">What did you think of this service?<span class="visuallyhidden"> (opens in a new tab)</span></a> (Takes 30 seconds).</p>
+  </div>
+</div>
+{% endblock %}
