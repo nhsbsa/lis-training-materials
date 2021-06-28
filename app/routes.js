@@ -204,3 +204,35 @@ router.get(/tctype-handler/, function (req, res) {
     res.redirect('hi-15');
   }
 });
+
+router.get(/jobdwp-handler/, function (req, res) {
+  if (req.query.jobdwp == 'yes') {
+    res.redirect('/benefits/other-income/dwp-fitness');
+  } else {
+    res.redirect('/benefits/other-income/cya');
+  }
+});
+
+router.get(/fitnote-handler/, function (req, res) {
+  if (req.query.fitnote == 'yes') {
+    res.redirect('/benefits/other-income/fit-notes-year');
+  } else {
+    res.redirect('/benefits/other-income/fit-notes-stop');
+  }
+});
+
+router.get(/fitnotestop-handler/, function (req, res) {
+  if (req.query.fitnotestop == 'yes') {
+    res.redirect('/benefits/other-income/fit-note-stop-date');
+  } else {
+    res.redirect('/benefits/other-income/cya');
+  }
+});
+
+router.get(/fitnoteyear-handler/, function (req, res) {
+  if (req.query.fitnoteyear == 'yes') {
+    res.redirect('/benefits/other-income/cya');
+  } else {
+    res.redirect('/benefits/other-income/fit-note-start');
+  }
+});

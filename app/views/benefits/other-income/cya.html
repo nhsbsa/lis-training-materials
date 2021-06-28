@@ -1,0 +1,202 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Which country do you live in? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large" id="question-heading">
+      <span class="heading-secondary">Apply for help with NHS costs</span>
+      Check your answers
+    </h1>
+    
+    <h2 class="heading-medium">Check eligibility</h2>
+    
+    <!-- answer to check -->
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Get universal credit</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="country-england">No</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/get-uc">
+              Change
+              <span class="visuallyhidden">unvirsal credit</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">           
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Get tax credits</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-incarehome-false">Yes</span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/tax-credits">Change
+              <span class="visuallyhidden">
+              tax credits
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Type of tax credits</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-haspartner-false">
+            Working Tax Credit on its own
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/tax-credits-type">Change
+              <span class="visuallyhidden">
+                type of tax credits
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Your household income is £15,276 or less?</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="household-hasclaimedasylum-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/hi-15">Change
+              <span class="visuallyhidden">
+                household income
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Income Support</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-haseducationortraining-false">
+            No
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/income-support">Change
+              <span class="visuallyhidden">
+                Income Support
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Get any of these benefits</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="beneficiary-incomesources-none">
+            No, I do not get any of these benefits
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/benefit-income">Change
+              <span class="visuallyhidden">
+                benefits
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <h2 class="heading-small">Receive Pension Credit, Child, Housing or Council Tax Benefit</h2>
+      </div>
+      <div class="column-answer column-one-third section">
+        <div class="form-answer">
+          <span id="kickouts-hassavings-false">
+            Yes
+          </span>
+        </div>
+      </div>
+      <div class="column-change column-one-third section">
+        <div class="group">
+          <span class="change">
+            <a href="/benefits/other-income/other-benefits">Change
+              <span class="visuallyhidden">
+                other benefits
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-margin">
+    <div class="form-item-wrapper">
+      <div class="form-group">
+        <a class="button" href="/benefits/other-income/application-progress" id="next-button">Next</a>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+        
+      
+{% endblock %}

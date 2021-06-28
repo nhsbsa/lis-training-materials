@@ -1,0 +1,51 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Has a Jobcentre or the Department for Work and Pensions (DWP) told you that you're not capable of work? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="jobdwp-handler" method="get" class="form">
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Income and other money</span>
+            Has a Jobcentre or the Department for Work and Pensions (DWP) told you that you're not capable of work?
+          </h1>
+        </legend>
+        <div class="form-groups">           
+          <div class="multiple-choice">
+            <input id="country-england" type="radio" value="yes" name="jobdwp">
+            <label for="country-england">
+              Yes
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="country-wales" type="radio" value="no" name="jobdwp">
+            <label for="country-wales">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
