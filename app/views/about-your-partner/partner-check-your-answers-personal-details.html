@@ -1,0 +1,156 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div>
+            <span class="form-hint form-group-margin" id="question-hint">
+                Apply for help with NHS costs
+            </span>
+            <h1 class="heading-large">
+                Check your answers
+            </h1>
+            <h2 class="heading-medium">
+                Personal details
+            </h2>
+            <!-- answer to check -->
+            <div class="grid-row">
+                <div class="column-one-third">
+                    <h2 class="heading-small">
+                        Full name
+                    </h2>
+                </div>
+                <div class="column-answer column-one-third section">
+                    <span class="visuallyhidden">Answer</span>
+                    <div>
+                        <span id="partner-name">
+                            <span class="single-line-answer"></span>
+                            <span class="single-line-answer"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="column-change column-one-third section">
+                    <div class="group">
+                        <span class="change">
+                            <a href="/apply-for-help-with-nhs-costs/partner-name-of-beneficiary">Change
+                                <span class="visuallyhidden">
+                                    name
+                                </span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-margin">
+            <!-- answer to check -->
+            <div class="grid-row">
+                <div class="column-one-third">
+                    <h2 class="heading-small">
+                        Date of birth
+                    </h2>
+                </div>
+                <div class="column-answer column-one-third section">
+                    <span class="visuallyhidden">Answer</span>
+                    <div>
+                        <span id="partner-dateofbirth">01 January 1990</span>
+                    </div>
+                </div>
+                <div class="column-change column-one-third section">
+                    <div class="group">
+                        <span class="change">
+                            <a href="/apply-for-help-with-nhs-costs/partner-date-of-birth">Change
+                                <span class="visuallyhidden">
+                                    date of birth
+                                </span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-margin">
+            <span></span>
+            <!-- answer to check -->
+            <div class="grid-row">
+                <div class="column-one-third">
+                    <h2 class="heading-small">
+                        NHS Number
+                    </h2>
+                </div>
+                <div class="column-answer column-one-third section">
+                    <span class="visuallyhidden">Answer</span>
+                    <div>
+                        <div>
+                            <div class="form-answer">
+                                <span id="partner-nhsnumber-applicable-false">
+                                    No
+                                </span>
+                            </div>
+                            <div class="composite-view">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-change column-one-third section">
+                    <div class="group">
+                        <span class="change">
+                            <a href="/apply-for-help-with-nhs-costs/partner-nhs-number">Change
+                                <span class="visuallyhidden">
+                                    if you know your partner's NHS Number
+                                </span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-margin">
+            <!-- answer to check -->
+            <div class="grid-row">
+                <div class="column-one-third">
+                    <h2 class="heading-small">
+                        Blind or severely sight impaired
+                    </h2>
+                </div>
+                <div class="column-answer column-one-third section">
+                    <span class="visuallyhidden">Answer</span>
+                    <div>
+                        <div>
+                            <div class="form-answer">
+                                <span id="partner-sightimpaired-true">
+                                    Yes
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-change column-one-third section">
+                    <div class="group">
+                        <span class="change">
+                            <a href="/apply-for-help-with-nhs-costs/partner-sight-impaired">Change
+                                <span class="visuallyhidden">
+                                    if your partner is severely sight impaired or registered blind
+                                </span></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-margin">
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-partner/your-application-progress" class="button"
+                    id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

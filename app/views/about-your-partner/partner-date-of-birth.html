@@ -1,0 +1,72 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div>
+            <span class="form-hint form-group-margin" id="question-hint">
+                Personal details
+            </span>
+            <h1 class="heading-large">
+                What is your partner's date of birth?
+            </h1>
+            <div class="form-hint">
+                For example, 31 07 1961
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend tabindex="-1" class="visuallyhidden">
+                        <span>
+                            What is your partner's date of birth?
+                        </span>
+                    </legend>
+                    <div class="form-date">
+                        <div class="form-group form-group-day">
+                            <label id="partner-dateofbirth-day-label" for="partner-dateofbirth-day"
+                                class="form-label form-group">
+                                Day
+                            </label>
+                            <input class="form-control" id="partner-dateofbirth-day" name="partner.dateOfBirth.day"
+                                value="">
+                        </div>
+                        <div class="form-group form-group-month">
+                            <label id="partner-dateofbirth-month-label" for="partner-dateofbirth-month"
+                                class="form-label form-group">
+                                Month
+                            </label>
+                            <input class="form-control" id="partner-dateofbirth-month" name="partner.dateOfBirth.month"
+                                value="">
+                        </div>
+                        <div class="form-group form-group-year">
+                            <label id="partner-dateofbirth-year-label" for="partner-dateofbirth-year"
+                                class="form-label form-group">
+                                Year
+                            </label>
+                            <input class="form-control" id="partner-dateofbirth-year" name="partner.dateOfBirth.year"
+                                value="">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-partner/partner-nhs-number" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
