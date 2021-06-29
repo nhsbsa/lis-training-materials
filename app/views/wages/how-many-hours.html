@@ -1,0 +1,50 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+How many hours a week do you usually work at your 'job title' job? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Wages from a job</span>
+            How many hours a week do you usually work at your 'job title' job?
+          </h1>
+        </legend>
+        <p class="form-hint">The amount allows for a maximum of two decimal places. For example, 37.75</p>
+        <div class="form-group">
+          <label for="beneficiary-name-last" id="label-name-last" class="visually-hidden">
+            How many hours a week do you usually work at your 'job title' job?
+          </label>
+          <input class="form-control" type="text" id="beneficiary-name-last" value="">
+        </div>
+      </fieldset>
+      <details>
+        <summary><span class="summary">What are contracted hours?</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>A worker is normally contracted a specific amount of hours each week. If you're not sure about your contracted hours, check with your employer.</p>
+        </div>
+      </details>
+      <div class="form-group" style="margin-top:20px;">
+        <a class="button" href="/wages/often-paid">Next</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

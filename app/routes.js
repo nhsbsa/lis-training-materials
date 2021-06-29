@@ -236,3 +236,43 @@ router.get(/fitnoteyear-handler/, function (req, res) {
     res.redirect('/benefits/other-income/fit-note-start');
   }
 });
+
+router.get(/wagesstart-handler/, function (req, res) {
+  if (req.query.jobtime == 'yes') {
+    res.redirect('/wages/job-start');
+  } else {
+    res.redirect('/wages/zero-hour');
+  }
+});
+
+router.get(/zerohour-handler/, function (req, res) {
+  if (req.query.zhour == 'yes') {
+    res.redirect('/wages/often-paid');
+  } else {
+    res.redirect('/wages/how-many-hours');
+  }
+});
+
+router.get(/oftenpaid-handler/, function (req, res) {
+  if (req.query.payreg == 'varies') {
+    res.redirect('/wages/job-date-last-work');
+  } else {
+    res.redirect('/wages/fit-note-employer');
+  }
+});
+
+router.get(/fitnoteemployer-handler/, function (req, res) {
+  if (req.query.fitnoteemploy == 'yes') {
+    res.redirect('/wages/job-fit-notes-start');
+  } else {
+    res.redirect('/wages/another-job');
+  }
+});
+
+router.get(/anotherjob-handler/, function (req, res) {
+  if (req.query.anotherjob == 'yes') {
+    res.redirect('/wages/job-title');
+  } else {
+    res.redirect('/pensions/private-pension');
+  }
+});

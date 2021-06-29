@@ -1,0 +1,58 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  What date did you last work at your 'job title' job? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Wages from a job</span>
+            What date did you last work at your 'job title' job?
+          </h1>
+        </legend>
+        <p class="form-hint">For example, 31 10 2018</p>
+        <div class="form-date">
+          <div class="form-group form-group-day">
+            <label id="beneficiary-dateofbirth-day-label" for="beneficiary-dateofbirth-day" class="form-label form-group">
+              Day
+            </label>
+            <input class="form-control" id="beneficiary-dateofbirth-day" value="">
+          </div>
+          <div class="form-group form-group-month">
+            <label id="beneficiary-dateofbirth-month-label" for="beneficiary-dateofbirth-month" class="form-label form-group">
+              Month
+            </label>
+            <input class="form-control" id="beneficiary-dateofbirth-month" value="">
+          </div>
+          <div class="form-group form-group-year">
+            <label id="beneficiary-dateofbirth-year-label" for="beneficiary-dateofbirth-year" class="form-label form-group">
+              Year
+            </label>
+            <input class="form-control" id="beneficiary-dateofbirth-year" value="">
+          </div>
+       </div>
+      </fieldset>
+      <div class="form-group" style="margin-top:20px;">
+        <a class="button" href="/wages/fit-note-employer">Next</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
