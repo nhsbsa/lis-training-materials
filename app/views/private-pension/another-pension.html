@@ -1,0 +1,71 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Private pensions you've told us about - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="anotherpension-handler" method="get" class="form">
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Private pensions</span>
+            Private pensions you've told us about
+          </h1>
+        </legend>
+        <h2 class="heading-medium">Private pensions</h2>
+        <div id="income-jobs-recall">
+          <div id="income-jobs-0-recall">
+            <div class="grid-row">
+              <div class="column-one-third">
+                <span class="tally-column">pension title</span>
+              </div>
+              <div class="column-one-third">Paid every calendar month</div>
+              <div class="column-one-third">
+                <span>
+                  <a href="job-title/1">
+                    Change<span class="visuallyhidden"> your 'private pension' details</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <hr class="recall">
+          </div>
+        </div>
+        <h2 class="heading-medium">Do you pay into another private pension?</h2>
+        <div class="multiple-choice">
+          <input id="yes" type="radio" name="anotherpension" value="yes">
+          <label for="yes">
+            Yes
+          </label>
+        </div>
+        <div class="multiple-choice">
+          <input id="no" type="radio" name="anotherpension" value="no">
+          <label for="no">
+            No
+          </label>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

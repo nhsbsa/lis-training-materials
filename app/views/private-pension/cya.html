@@ -1,0 +1,360 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What are you studying at Northumbria University? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <form>
+        <fieldset class="inline">
+          <legend>
+            <h1 class="heading-large" id="question-heading">
+              <span class="heading-secondary">Apply for help with NHS costs</span>
+              Check your answers
+            </h1>
+          </legend>
+          <h2 class="heading-medium">
+            Income from a job
+          </h2>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Job title
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <span>Job title</span>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                  <span class="change">
+                    <a href="/wages/job-title">
+                      Change
+                      <span class="visuallyhidden">
+                        income from a job
+                      </span>
+                    </a>
+                  </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Started in the last 3 months
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <span id="content-beneficiary-education-nameofcourse">
+                No
+              </span>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/job-time">Change
+                    <span class="visuallyhidden">
+                      start
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Zero hour contract
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <div class="form-answer">
+                <span id="beneficiary-education-isoverseasstudent-true">
+                  Yes
+                </span>
+              </div>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/zero-hour">Change
+                    <span class="visuallyhidden">
+                      zero hour contract
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Contracted hours
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <div class="form-answer">
+                <span id="beneficiary-education-threeterms-true">
+                  20
+                </span>
+              </div>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/how-many-hours">Change
+                    <span class="visuallyhidden">
+                      Contracted hours
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Job paid
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              It varies
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/often-paid">Change
+                    <span class="visuallyhidden">
+                      job paid
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Date you last worked
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              01 January 2021
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/job-date-last-work">Change
+                    <span class="visuallyhidden">
+                      date last worked
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Sending in fit notes
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              No
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/fit-note-employer">Change
+                    <span class="visuallyhidden">
+                      fit notes
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-margin">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Have another job
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <div class="form-answer">
+                <span id="beneficiary-education-infinaloronlyyear-true">
+                  No
+                </span>
+              </div>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/wages/another-job">Change
+                    <span class="visuallyhidden">
+                      another job
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="heading-medium">
+            Personal pension details
+          </h2>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Pay into a private pension
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <span>Yes</span>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                  <span class="change">
+                    <a href="/private-pension/private-pension">
+                      Change
+                      <span class="visuallyhidden">
+                        private pension
+                      </span>
+                    </a>
+                  </span>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-margin">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Name of your private pension
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <span>
+                Pension name
+              </span>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/private-pension/pension-name">Change
+                    <span class="visuallyhidden">
+                      start
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Private pension paid
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <div class="form-answer">
+                <span>
+                  Once a year
+                </span>
+              </div>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/private-pension/how-often">Change
+                    <span class="visuallyhidden">
+                      private pension paid
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Private pension amount
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              <div class="form-answer">
+                <span id="beneficiary-education-threeterms-true">
+                  £111.00
+                </span>
+              </div>
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/private-pension/how-much">Change
+                    <span class="visuallyhidden">
+                      amount
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-margin">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <h2 class="heading-small">
+                Get another private pension
+              </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+              <span class="visuallyhidden">Answer</span>
+              It varies
+            </div>
+            <div class="column-change column-one-third section">
+              <div class="group">
+                <span class="change">
+                  <a href="/private-pension/another-pension">Change
+                    <span class="visuallyhidden">
+                      another pension
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-margin">
+        </fieldset>
+        <div class="form-item-wrapper">
+          <div class="form-group">
+            <a href="/private-pension/app-progress" class="button">Next</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

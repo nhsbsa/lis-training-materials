@@ -276,3 +276,19 @@ router.get(/anotherjob-handler/, function (req, res) {
     res.redirect('/pensions/private-pension');
   }
 });
+
+router.get(/ppension-handler/, function (req, res) {
+  if (req.query.ppension == 'yes') {
+    res.redirect('/private-pension/pension-name');
+  } else {
+    res.redirect('/private-pension/cya');
+  }
+});
+
+router.get(/anotherpension-handler/, function (req, res) {
+  if (req.query.anotherpension == 'yes') {
+    res.redirect('/private-pension/pension-name');
+  } else {
+    res.redirect('/private-pension/cya');
+  }
+});

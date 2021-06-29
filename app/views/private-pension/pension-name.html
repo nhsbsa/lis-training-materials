@@ -1,0 +1,45 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What is the name of your private pension? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Private pension</span>
+            What is the name of your private pension?
+          </h1>
+        </legend>
+        <p>We will ask you about one pension at a time.</p>
+        <div class="form-group">
+          <label for="beneficiary-name-last" id="label-name-last" class="form-label">
+            <b>Name of pension</b>
+            <p class="form-hint">For example, Scottish Widows</p>
+          </label>
+          <input class="form-control" type="text" id="beneficiary-name-last" value="">
+        </div>
+      </fieldset>
+      <div class="form-group" style="margin-top:20px;">
+        <a class="button" href="/private-pension/how-often">Next</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
