@@ -295,7 +295,7 @@ router.get(/anotherpension-handler/, function (req, res) {
 
 router.get(/proptype-handler/, function (req, res) {
   if (req.query.proptype == 'rent') {
-    res.redirect('/where-you-live/housing-benefit'); 
+    res.redirect('/where-you-live/house-benefit'); 
   } else if (req.query.proptype == 'own') {
     res.redirect('/where-you-live/mortgage'); 
   } else if (req.query.proptype == 'shared') {
@@ -374,7 +374,7 @@ router.get(/accessibleloan-handler/, function (req, res) {
 });
 
 router.get(/counciltax-handler/, function (req, res) {
-  if (req.query.accessibleloan == 'yes') {
+  if (req.query.counciltax == 'yes') {
     res.redirect('/where-you-live/how-council-tax'); 
   } else {
     res.redirect('/where-you-live/cya');

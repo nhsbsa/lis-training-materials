@@ -4,7 +4,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Do you get Housing Benefit? - LIS training - NHSBSA
+How do you pay your Council Tax? - LIS training - NHSBSA
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -17,7 +17,7 @@ Do you get Housing Benefit? - LIS training - NHSBSA
 {% block content %}
 <div class="grid-row">
   <div class="column-two-thirds">
-    <form action="hb-handler" method="get" class="form">
+    <form>
       <fieldset>
         <legend>
           <h1 class="heading-large" id="question-heading">
@@ -27,13 +27,13 @@ Do you get Housing Benefit? - LIS training - NHSBSA
         </legend>
         <div class="form-groups">           
           <div class="multiple-choice">
-            <input id="country-england" type="radio" value="yes" name="hb">
+            <input id="country-england" type="radio" value="yes" name="ct">
             <label for="country-england">
               Over 10 months
             </label>
           </div>
           <div class="multiple-choice">
-            <input id="country-wales" type="radio" value="no" name="hb">
+            <input id="country-wales" type="radio" value="no" name="ct">
             <label for="country-wales">
               Over 12 months
             </label>
@@ -42,7 +42,7 @@ Do you get Housing Benefit? - LIS training - NHSBSA
             or
           </div>
           <div class="multiple-choice">
-            <input id="country-scotland" type="radio" value="not-yet" name="hb">
+            <input id="country-scotland" type="radio" value="not-yet" name="ct">
             <label for="country-scotland">
               I know my yearly amount
             </label>
@@ -61,7 +61,7 @@ Do you get Housing Benefit? - LIS training - NHSBSA
        </details>
       <div class="form-item-wrapper">
         <div class="form-group">
-          <input class="button" type="submit" value="Next" id="next-button" />
+          <a href="/where-you-live/council-tax-amount" class="button">Next</a>
         </div>
       </div>
     </form>

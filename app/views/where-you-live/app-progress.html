@@ -1,0 +1,105 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Your application - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">Your application</h1>
+    <p>You can't send the application until you've completed all the sections.</p>
+    <div id="check-eligibility-section">
+      <h2 class="heading-medium">1. Check before you start</h2>
+      <div class="section-row" id="check-eligibility-task">
+        <div>
+          <a id="check-eligibility" href="/before-you-start/check-your-answers">
+          Check eligibility</a>
+        </div>
+        <div class="progress-box task-completed">
+          <strong>Completed</strong>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="heading-medium">2. About you</h2>
+      <p>To work out what help you can get, we need information about your housing costs and income.</p>
+      <div class="section-row">
+        <div>
+          <a href="/personal-details/check-your-answers">
+            Personal details
+          </a>
+        </div>
+        <div class="progress-box task-completed">
+          <strong>Completed</strong>
+        </div>
+      </div>
+      <div class="section-row">
+        <div>
+          <a href="/contact-details/check-your-answers">
+            Contact details
+          </a>
+        </div>
+        <div class="progress-box task-completed">
+          <strong>Completed</strong>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="heading-medium">3. About your income</h2>
+      <div class="section-row">
+        <div>
+          <a href="/private-pension/cya">
+            Wages
+          </a>
+        </div>
+        <div class="progress-box task-completed">
+          <strong>Completed</strong>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="heading-medium">4. About your home</h2>
+      <div class="section-row">
+        <div>
+          <a href="/where-you-live/cya">Where you live</a>
+        </div>
+        <div class="progress-box task-completed">
+          <strong>Completed</strong>
+        </div>
+      </div>
+      <div class="section-row">
+        <div>
+          <a href="#">People who live with you</a>
+        </div>
+        <div class="progress-box task-cant-start">
+          <strong>Can't start yet</strong>
+        </div>
+      </div>
+    </div>
+    <div id="submit-application-section">
+      <h2 class="heading-medium">5. Submit application</h2>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" disabled="disabled">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+      
+    
+         
+      
+{% endblock %}
