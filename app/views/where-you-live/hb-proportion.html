@@ -1,0 +1,51 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get Housing Benefit? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="hbhbproportion-handler" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Where you live</span>
+            How much of your rent is paid by Housing Benefit?
+          </h1>
+        </legend>
+        <div class="form-groups">           
+          <div class="multiple-choice">
+            <input id="country-england" type="radio" value="all" name="hbproportion">
+            <label for="country-england">
+              All
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="country-wales" type="radio" value="some" name="hbproportion">
+            <label for="country-wales">
+              Some
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

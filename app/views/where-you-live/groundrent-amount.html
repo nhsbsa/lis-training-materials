@@ -1,0 +1,49 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+How much ground rent do you pay every 4 weeks? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <fieldset class="inline">
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Where live</span>
+            How much ground rent do you pay every 4 weeks?
+          </h1>
+        </legend>
+        <p class="form-hint">The amount must include pence. For example, £171.31</p>
+        <div class="form-group">
+          <div class="currency-input">
+            <div class="currency-input-inner">
+              <label for="payment-amount" class="visually-hidden">
+                amount
+              </label>
+              <span class="symbol">£</span>
+              <input id="payment-amount" class="currency-amount form-control" type="text" name="loanamount" value="">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group" style="margin-top:20px;">
+        <a class="button" href="/where-you-live/accessible-loan">Next</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

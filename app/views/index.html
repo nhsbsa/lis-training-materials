@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Content page example - NHS.UK prototype kit
+  LIS training - NHSBSA
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -22,8 +22,6 @@
 {% block outerContent %}
 {% endblock %}
 
-<!-- For adding page content -->
-<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="grid-row">
   <form method="post" class="form" action="/check-for-help-paying-nhs-costs/start">
@@ -218,7 +216,7 @@
         </div>
        </details> 
        
-       <!--Other Income-->
+      <!-- Private pensions -->
       <details>
         <summary><span class="summary">Private pension</span></summary>
         <div class="panel panel-border-narrow">
@@ -232,7 +230,20 @@
             <li><a href="/private-pension/app-progress">Your application</a></li>
           </ul>
         </div>
-       </details>  
+       </details>
+       
+      <h2 class="heading-medium">About your home</h2>
+      <!-- Where you live -->
+      <details>
+        <summary><span class="summary">Where you live</span></summary>
+        <div class="panel panel-border-narrow">
+          <ul class="list list-bullet">
+            <li><a href="/where-you-live/hospital">Are you in hospital and have been for over a year?</a></li>
+            <li><a href="/where-you-live/property-type">Which type of property do you live in?</a></li>
+            
+          </ul>
+        </div>
+       </details>
     </div>
   </form>
 </div>
