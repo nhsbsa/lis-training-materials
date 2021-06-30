@@ -347,13 +347,21 @@ router.get(/servicecharge-handler/, function (req, res) {
 
 router.get(/mealbill-handler/, function (req, res) {
   if (req.query.mealbill == 'meal') {
-    res.redirect('/where-you-live/meal-rent'); 
+    res.redirect('/where-you-live/meals-included'); 
   } else if (req.query.mealbill == 'energy') {
     res.redirect('/where-you-live/energy-bills'); 
   } else if (req.query.mealbill == 'both') {
     res.redirect('/where-you-live/meal-bills'); 
   } else {
     res.redirect('/where-you-live/pay-service-charge');
+  }
+});
+
+router.get(/energybills-handler/, function (req, res) {
+  if (req.query.energybills == 'yes') {
+    res.redirect('/where-you-live/rent-one-room'); 
+  } else {
+    res.redirect('/where-you-live/rent-included');
   }
 });
 
