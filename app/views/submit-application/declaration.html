@@ -1,0 +1,56 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <span class="form-hint form-group-margin" id="question-hint">
+            Submit your application
+        </span>
+        <h1 class="heading-large">
+            Declaration
+        </h1>
+        <p>
+            I confirm that:
+        </p>
+        <ul class="list list-bullet">
+            <li>
+                the information I have given on this form is correct and complete, and I understand that if it is
+                not, appropriate action may be taken
+            </li>
+            <li>
+                I understand <a target="_blank" rel="noopener"
+                    href="https://www.nhsbsa.nhs.uk/nhs-low-income-scheme/nhs-low-income-scheme-privacy-notice">how
+                    my information will be used<span class="visuallyhidden"> (Opens in a new window)</span></a>
+            </li>
+        </ul>
+        <div class="noprint notice form-group">
+            <i class="icon icon-important">
+                <span class="visually-hidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+                False information may lead to civil or criminal action.<br>Anyone found to have wrongly claimed help
+                with NHS costs will have to pay a penalty charge or may face prosecution.
+            </strong>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/submit-application/application-submitted" class="button"
+                    id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

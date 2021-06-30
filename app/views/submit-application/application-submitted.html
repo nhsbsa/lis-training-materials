@@ -1,0 +1,52 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div class="done-panel">
+            <h1 class="heading-xlarge done-panel">
+                <img alt="done" src="/images/done-tick.png">
+                Done
+            </h1>
+            <h2 class="heading-medium">
+                <span class="panel-text heading-secondary">Reference number</span> 6b58 umx2
+            </h2>
+        </div>
+        <h2 class="heading-medium">
+            What happens next
+        </h2>
+        <p>
+            We'll review and process your application and let you know the outcome by post. This can take up to 18
+            working days.
+        </p>
+        <h2 class="heading-small">
+            Before you go
+        </h2>
+        <p class="noprint">
+            Help us to improve the service by
+            <a href="http://www.snapsurveys.com/wh/s.asp?k=151924339509&amp;pid=ApplyForHelp" target="_blank"
+                rel="noopener">answering some questions<span class="visuallyhidden"> (Opens in a new
+                    window)</span></a>
+            about it.
+        </p>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/submit-application/application-submitted" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
