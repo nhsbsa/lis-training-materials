@@ -1,0 +1,125 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div>
+            <span class="form-hint form-group-margin" id="question-hint">
+                Personal details
+            </span>
+            <h1 class="heading-large">
+                Do you know your partner's NHS Number?
+            </h1>
+            <p>
+                You don't have to tell us your partner's NHS Number, but telling us helps us to identify your partner
+                correctly and match their details to their health records.
+            </p>
+            <div class="form-hint">
+                Their NHS Number is a 10-digit number, like 485 777 3456.
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend tabindex="-1" class="visuallyhidden">
+                        <span>
+                            Do you know your partner's NHS Number?
+                        </span>
+                    </legend>
+                    <div class="multiple-choice">
+                        <input data-target="partner-nhsnumber-applicable-true-nested"
+                            id="partner-nhsnumber-applicable-true" type="radio" value="true" class="show-input"
+                            name="partner.nhsNumber.compositeAdaptor.optionType">
+                        <label id="label-radio-option-label-true" for="partner-nhsnumber-applicable-true">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="panel panel-border-narrow show-hide-js nested-group"
+                        id="partner-nhsnumber-applicable-true-nested" style="display: none;">
+                        <h2 class="heading-small">
+                            What is your partner's NHS Number?
+                        </h2>
+                        <div class="form-hint">
+                            Their NHS Number is not the same as their National Insurance number, which has letters in
+                            it.
+                        </div>
+                        <div class="form-group">
+                            <fieldset class="inline group-margin">
+                                <legend tabindex="-1" class="visuallyhidden">
+                                    <span>
+                                        What is your partner's NHS Number?
+                                    </span>
+                                </legend>
+                                <label for="partner-nhsnumber-value-true" class="visuallyhidden">
+                                    your partner's NHS Number
+                                </label>
+                                <div>
+                                    <input id="partner-nhsnumber-value-true" class="form-control" type="text"
+                                        name="partner.nhsNumber.compositeAdaptor.amountMap[true]" value="">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="multiple-choice">
+                        <input data-target="partner-nhsnumber-applicable-false-nested"
+                            id="partner-nhsnumber-applicable-false" type="radio" value="false" class="show-input"
+                            name="partner.nhsNumber.compositeAdaptor.optionType">
+                        <label id="label-radio-option-label-false" for="partner-nhsnumber-applicable-false">
+                            No
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <details class="noprint mb" role="group">
+                <summary role="button" aria-controls="reveal-1" aria-expanded="false">
+                    <span class="summary">
+                        Where to find your partner's NHS Number
+                    </span>
+                </summary>
+                <div class="panel panel-border-narrow" id="reveal-1" aria-hidden="true">
+                    <p>
+                        If your partner is registered with a GP, they'll have a 10-digit NHS Number that is unique to
+                        them.
+                    </p>
+                    <p>
+                        It's usually on any letter or document your partner has received from the NHS, such as:
+                    </p>
+                    <ul class="list list-bullet">
+                        <li>
+                            prescriptions, usually underneath their name and address
+                        </li>
+                        <li>
+                            test results
+                        </li>
+                        <li>
+                            appointment letters
+                        </li>
+                        <li>
+                            maternity notes
+                        </li>
+                        <li>
+                            an NHS medical card
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-partner/partner-sight-impaired" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

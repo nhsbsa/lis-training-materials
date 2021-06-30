@@ -1,0 +1,66 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <span class="form-hint form-group-margin" id="question-hint">
+            Personal details
+        </span>
+        <h1 class="heading-large">
+            What is your partner's name?
+        </h1>
+        <div class="form-hint">
+            Use their full name. For example, Susan not Sue.
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <legend tabindex="-1" class="visuallyhidden">
+                    <span>
+                        What is your partner's name?
+                    </span>
+                </legend>
+                <div class="form-group">
+                    <label for="partner-name-first" id="label-name-first" class="form-label">
+                        First name
+                    </label>
+                    <input class="form-control" type="text" id="partner-name-first" name="partner.name.first" value="">
+                </div>
+                <div class="form-group">
+                    <label for="partner-name-middle" id="label-name-middle" class="form-label">
+                        Middle name (optional)
+                    </label>
+                    <input class="form-control" type="text" id="partner-name-middle" name="partner.name.middle"
+                        value="">
+                </div>
+                <div class="form-group">
+
+                    <label for="partner-name-last" id="label-name-last" class="form-label">
+
+                        Last name
+
+                    </label>
+                    <input class="form-control" type="text" id="partner-name-last" name="partner.name.last" value="">
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-partner/partner-date-of-birth" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

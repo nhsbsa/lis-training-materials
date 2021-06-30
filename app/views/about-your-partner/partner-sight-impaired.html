@@ -1,0 +1,57 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <div>
+            <span class="form-hint form-group-margin" id="question-hint">
+                Personal details
+            </span>
+            <h1 class="heading-large">
+                Is your partner severely sight impaired or registered blind?
+            </h1>
+            <div class="form-group">
+                <fieldset class="inline">
+                    <legend tabindex="-1" class="visuallyhidden">
+                        <span>
+                            Is your partner severely sight impaired or registered blind?
+                        </span>
+                    </legend>
+                    <div class="multiple-choice">
+                        <input data-target="partner-sightimpaired-true-nested" id="partner-sightimpaired-true"
+                            type="radio" value="true" name="partner.sightImpaired">
+                        <label id="label-radio-yes-true" for="partner-sightimpaired-true">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="multiple-choice">
+                        <input data-target="partner-sightimpaired-false-nested" id="partner-sightimpaired-false"
+                            type="radio" value="false" name="partner.sightImpaired">
+                        <label id="label-radio-no-false" for="partner-sightimpaired-false">
+                            No
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-partner/partner-check-your-answers-personal-details" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
