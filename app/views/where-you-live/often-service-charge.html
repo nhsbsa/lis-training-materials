@@ -1,0 +1,75 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+How often do you pay a service charge? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="oftenservice-handler" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Where you live</span>
+            How often do you pay a service charge?
+          </h1>
+        </legend>
+        <div class="block-form-groups">           
+          <div class="multiple-choice" style="margin-bottom:20px; display:block">
+            <input id="option-1" type="radio" value="week" name="oftenservice">
+            <label for="option-1">
+              Every week
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-2" type="radio" value="twoweeks" name="oftenservice">
+            <label for="option-2">
+              Every 2 weeks
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-3" type="radio" value="fourweeks" name="oftenservice">
+            <label for="option-3">
+              Every 4 weeks
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-4" type="radio" value="month" name="oftenrent">
+            <label for="option-4">
+              Every calendar month
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-7" type="radio" value="yearly" name="oftenrent">
+            <label for="option-7">
+              Once a year
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group" style="margin-top:20px;">
+        <a class="button" href="/where-you-live/service-payment-amount">Next</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

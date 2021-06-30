@@ -323,8 +323,60 @@ router.get(/homeloan-handler/, function (req, res) {
 
 router.get(/hb-handler/, function (req, res) {
   if (req.query.hb == 'yes') {
-    res.redirect('/where-you-live/rent-hb'); 
+    res.redirect('/where-you-live/hb-proportion'); 
   } else {
-    res.redirect('/where-you-live/house-benefit');
+    res.redirect('/where-you-live/often-rent');
+  }
+});
+
+router.get(/hbproportion-handler/, function (req, res) {
+  if (req.query.hbproportion == 'all') {
+    res.redirect('/where-you-live/pay-service-charge'); 
+  } else {
+    res.redirect('/where-you-live/often-rent');
+  }
+});
+
+router.get(/servicecharge-handler/, function (req, res) {
+  if (req.query.servicecharge == 'yes') {
+    res.redirect('/where-you-live/often-service-charge'); 
+  } else {
+    res.redirect('/where-you-live/ground-rent');
+  }
+});
+
+router.get(/mealbill-handler/, function (req, res) {
+  if (req.query.mealbill == 'meal') {
+    res.redirect('/where-you-live/meal-rent'); 
+  } else if (req.query.mealbill == 'energy') {
+    res.redirect('/where-you-live/energy-bills'); 
+  } else if (req.query.mealbill == 'both') {
+    res.redirect('/where-you-live/meal-bills'); 
+  } else {
+    res.redirect('/where-you-live/pay-service-charge');
+  }
+});
+
+router.get(/groundrent-handler/, function (req, res) {
+  if (req.query.groundrent == 'yes') {
+    res.redirect('/where-you-live/often-groundrent'); 
+  } else {
+    res.redirect('/where-you-live/accessible-loan');
+  }
+});
+
+router.get(/accessibleloan-handler/, function (req, res) {
+  if (req.query.accessibleloan == 'yes') {
+    res.redirect('/where-you-live/often-accessibleloan'); 
+  } else {
+    res.redirect('/where-you-live/council-tax');
+  }
+});
+
+router.get(/counciltax-handler/, function (req, res) {
+  if (req.query.accessibleloan == 'yes') {
+    res.redirect('/where-you-live/how-council-tax'); 
+  } else {
+    res.redirect('/where-you-live/cya');
   }
 });

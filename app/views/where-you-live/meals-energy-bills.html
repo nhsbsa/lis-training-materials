@@ -1,0 +1,69 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Are meals or energy bills included in your rent? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="mealbill-handler" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Where you live</span>
+            Are meals or energy bills included in your rent?
+          </h1>
+        </legend>
+        <div class="block-form-groups">           
+          <div class="multiple-choice" style="margin-bottom:20px; display:block">
+            <input id="option-1" type="radio" value="meal" name="mealbill">
+            <label for="option-1">
+              Meals only
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-2" type="radio" value="energy" name="mealbill">
+            <label for="option-2">
+              Energy bills only
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-3" type="radio" value="both" name="mealbill">
+            <label for="option-3">
+              Both meals and energy bills
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-4" type="radio" value="no" name="mealbill">
+            <label for="option-4">
+              No, these aren't included
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
