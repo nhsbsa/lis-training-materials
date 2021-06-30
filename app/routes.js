@@ -292,3 +292,39 @@ router.get(/anotherpension-handler/, function (req, res) {
     res.redirect('/private-pension/cya');
   }
 });
+
+router.get(/proptype-handler/, function (req, res) {
+  if (req.query.proptype == 'rent') {
+    res.redirect('/where-you-live/housing-benefit'); 
+  } else if (req.query.proptype == 'own') {
+    res.redirect('/where-you-live/mortgage'); 
+  } else if (req.query.proptype == 'shared') {
+    res.redirect('/where-you-live/mortgage'); 
+  } else {
+    res.redirect('/where-you-live/cya');
+  }
+});
+
+router.get(/mortgage-handler/, function (req, res) {
+  if (req.query.mortgage == 'yes') {
+    res.redirect('/where-you-live/often-mortgage'); 
+  } else {
+    res.redirect('/where-you-live/home-loan');
+  }
+});
+
+router.get(/homeloan-handler/, function (req, res) {
+  if (req.query.homeloan == 'yes') {
+    res.redirect('/where-you-live/often-loan'); 
+  } else {
+    res.redirect('/where-you-live/house-benefit');
+  }
+});
+
+router.get(/hb-handler/, function (req, res) {
+  if (req.query.hb == 'yes') {
+    res.redirect('/where-you-live/rent-hb'); 
+  } else {
+    res.redirect('/where-you-live/house-benefit');
+  }
+});

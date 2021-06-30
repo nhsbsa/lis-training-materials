@@ -1,0 +1,81 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Which type of property do you live in? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="proptype-handler" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Where you live</span>
+            Which type of property do you live in?
+          </h1>
+        </legend>
+        <div class="block-form-groups">           
+          <div class="multiple-choice" style="margin-bottom:20px; display:block">
+            <input id="option-1" type="radio" value="someoneelse" name="proptype">
+            <label for="option-1">
+              <b>In someone else's home</b>
+              <p class="hint-paragraph">If you live with your parents, friends or relatives in their home.</p>
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-2" type="radio" value="rent" name="proptype">
+            <label for="option-2">
+              <b>A property or room I rent</b>
+              <p class="hint-paragraph">This is where you have a tenancy agreement. It includes student accommodation or rent paid to a council or landlord.</p>
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-3" type="radio" value="own" name="proptype">
+            <label for="option-3">
+              <b>A property I own</b>
+              <p class="hint-paragraph">This could be with or without a mortgage.</p>
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-4" type="radio" value="shared" name="proptype">
+            <label for="option-4">
+              <b>A shared ownership property</b>
+              <p class="hint-paragraph">This is where you pay mortgage and rent.</p>
+            </label>
+          </div>
+        </div>
+        <div class="block-form-groups"> 
+          <div class="multiple-choice" style="margin-bottom:20px; display:block;">
+            <input id="option-7" type="radio" value="varies" name="proptype">
+            <label for="option-7">
+              <b>I do not have a permanent address</b>
+              <p class="hint-paragraph">This could be because you're homeless or live in a shelter or hostel.</p>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
