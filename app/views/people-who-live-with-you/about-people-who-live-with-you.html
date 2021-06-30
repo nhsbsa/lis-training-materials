@@ -1,0 +1,43 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <span class="form-hint form-group-margin" id="question-hint">
+            People who live with you
+        </span>
+        <h1 class="heading-large">
+            What you need
+        </h1>
+        <p>
+            In this section, we will ask you:
+        </p>
+        <ul class="list list-bullet">
+            <li>
+                if you have any children living with you
+            </li>
+            <li>
+                if anyone else lives with you, and whether they work or get benefits
+            </li>
+        </ul>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-home/support-children-financially" class="button" id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

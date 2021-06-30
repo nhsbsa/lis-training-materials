@@ -1,0 +1,68 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <span class="form-hint form-group-margin" id="question-hint">
+            Apply for help with NHS costs
+        </span>
+        <h1 class="heading-large">
+            Check your answers
+        </h1>
+        <h2 class="heading-medium">
+            People who live with you
+        </h2>
+        <span></span>
+        <!-- answer to check -->
+        <div class="grid-row">
+            <div class="column-one-third">
+                <h2 class="heading-small">
+                    Children who you support financially
+                </h2>
+            </div>
+            <div class="column-answer column-one-third section">
+                <span class="visuallyhidden">Answer</span>
+                <div>
+                    <div>
+                        <div class="form-answer">
+                            <span id="othersinhome-supportchildrenfinancially-true">
+                                Yes
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column-change column-one-third section">
+                <div class="group">
+                    <span class="change">
+                        <a href="/apply-for-help-with-nhs-costs/support-children-financially">Change
+                            <span class="visuallyhidden">
+                                if you have any children living with you who you support financially.
+                            </span></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-margin">
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/about-your-home/check-your-answers-people-who-live-with-you" class="button"
+                    id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
