@@ -1,0 +1,59 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <span class="form-hint form-group-margin" id="question-hint">
+            Get a refund
+        </span>
+        <h1 class="heading-large">
+            Do you want to claim a refund for any NHS costs you've already paid?
+        </h1>
+        <p>
+            Refunds have to be claimed within 3 months of the date you paid the charge or had a sight test.
+        </p>
+        <div class="form-group">
+            <fieldset class="inline">
+                <legend tabindex="-1" class="visuallyhidden">
+                    <span>
+                        Do you want to claim a refund for any NHS costs you've already paid?
+                    </span>
+                </legend>
+                <div class="multiple-choice">
+                    <input data-target="refund-applicable-true-nested" id="refund-applicable-true" type="radio"
+                        value="true" name="refund">
+                    <label id="label-radio-yes-true" for="refund-applicable-true">
+                        Yes
+                    </label>
+                </div>
+                <div class="multiple-choice">
+                    <input data-target="refund-applicable-false-nested" id="refund-applicable-false" type="radio"
+                        value="false" name="refund">
+                    <label id="label-radio-no-false" for="refund-applicable-false">
+                        No
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/submit-application/refund-type" class="button"
+                    id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

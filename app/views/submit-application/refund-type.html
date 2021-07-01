@@ -1,0 +1,94 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Do you get money from any of these? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <span class="form-hint form-group-margin" id="question-hint">
+            Get a refund
+        </span>
+        <h1 class="heading-large">
+            Which of these NHS costs do you want to claim a refund for?
+        </h1>
+        <p>
+            Select all that apply
+        </p>
+        <div>
+            <fieldset>
+                <legend tabindex="-1" class="visuallyhidden">
+                    <span>
+                        Which of these NHS costs do you want to claim a refund for?
+                    </span>
+                </legend>
+                <div class="inline-form-groups form-group">
+                    <div class="multiple-choice group">
+                        <input data-target="refund-charges-prescription-nested" id="refund-charges-prescription"
+                            type="checkbox" value="PRESCRIPTION" name="refund"><input type="hidden"
+                            name="_refund" value="on">
+                        <label id="label-radio-prescription" for="refund-charges-prescription">
+                            NHS prescriptions
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="refund-charges-dental-treatment-nested" id="refund-charges-dental-treatment"
+                            type="checkbox" value="DENTAL_TREATMENT" name="refund"><input type="hidden"
+                            name="_refund" value="on">
+                        <label id="label-radio-dental-treatment" for="refund-charges-dental-treatment">
+                            NHS dental treatment
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="refund-charges-sight-test-nested" id="refund-charges-sight-test"
+                            type="checkbox" value="SIGHT_TEST" name="refund"><input type="hidden"
+                            name="_refund" value="on">
+                        <label id="label-radio-sight-test" for="refund-charges-sight-test">
+                            sight test
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="refund-charges-glasses-contact-lenses-nested"
+                            id="refund-charges-glasses-contact-lenses" type="checkbox" value="GLASSES_CONTACT_LENSES"
+                            name="refund"><input type="hidden" name="_refund" value="on">
+                        <label id="label-radio-glasses-contact-lenses" for="refund-charges-glasses-contact-lenses">
+                            Glasses or contact lenses
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="refund-charges-wigs-fabric-supports-nested"
+                            id="refund-charges-wigs-fabric-supports" type="checkbox" value="WIGS_FABRIC_SUPPORTS"
+                            name="refund"><input type="hidden" name="_refund" value="on">
+                        <label id="label-radio-wigs-fabric-supports" for="refund-charges-wigs-fabric-supports">
+                            NHS wigs or fabric supports
+                        </label>
+                    </div>
+                    <div class="multiple-choice group">
+                        <input data-target="refund-charges-travel-nested" id="refund-charges-travel" type="checkbox"
+                            value="TRAVEL" name="refund"><input type="hidden" name="_refund" value="on">
+                        <label id="label-radio-travel" for="refund-charges-travel">
+                            Travel to receive NHS treatment
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-item-wrapper">
+            <div class="form-group">
+                <a href="/submit-application/declaration" class="button"
+                    id="next-button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
