@@ -1,0 +1,67 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Which type of Employment and Support Allowance (ESA) do you get? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="esa-handler" method="get" class="form">
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Income and other money</span>
+            Which type of Employment and Support Allowance (ESA) do you get?
+          </h1>
+        </legend>
+        <p>There are 2 types of ESA, income-related and contribution-based.</p>
+        <details style="margin-bottom: 20px;">
+          <summary><span class="summary">I'm not sure which type I get</span></summary>
+          <div class="panel panel-border-narrow">
+            <h2 class="heading-medium">Check your benefit payment letter</h2>
+            <p>On the last page of your benefit letter, look under the heading <b>'Income and Benefits'</b>.</p>
+            <p>It will say either:</p>
+            <ul class="list list-bullet">
+              <li>'your <b>income-related</b> entitlement is'</li>
+              <li>'you are entitled to <b>contribution-based</b>'</li>
+            </ul>
+            <p>Find out more about the <a href="https://www.gov.uk/employment-support-allowance/types-of-esa" target="_blank" rel="noopener">different types of ESA<span class="visually-hidden">(Opens in a new window)</span></a>.</p>
+
+            <p>If you're still unsure, contact the <a href="https://www.gov.uk/contact-jobcentre-plus/existing-benefit-claims" target="_blank" rel="noopener" >Jobcentre Plus Helpline<span class="visually-hidden">(Opens in a new window)</span></a>.</p>
+          </div>
+         </details>  
+        <div class="form-groups">           
+          <div class="multiple-choice">
+            <input id="country-england" type="radio" value="income" name="esr">
+            <label for="country-england">
+              Income-related ESA
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="country-wales" type="radio" value="contribution" name="esr">
+            <label for="country-wales">
+              Contribution-based ESA
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input class="button" type="submit" value="Next" id="next-button" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

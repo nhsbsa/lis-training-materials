@@ -1,0 +1,74 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Which type of Employment and Support Allowance (ESA) do you get? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Income and other money</span>
+            Which ESA group are you in?
+          </h1>
+        </legend>
+        <details style="margin-bottom: 20px;">
+          <summary><span class="summary">I'm not sure which group i'm in</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>The Department for Work and Pensions (DWP) will send you a decision letter to tell you which ESA group you are in.</p>
+            <p>You will be in either the:</p>
+            <ul class="list list-bullet">
+              <li><b>work-related activity group</b>, where you'll have regular interviews with an adviser</li>
+              <li><b>support group</b>, where you do not have interviews – you're usually in this group if your illness or disability severely limits what you can do</li>
+            </ul>
+            <p>If you have made a claim for ESA but haven't been put in a group yet, you will be in the assessment phase.</p>
+
+            <p>You are usually in the assessment phase while you wait for your Work Capability Assessment.</p>
+          </div>
+         </details>  
+        <div class="form-groups">           
+          <div class="multiple-choice">
+            <input id="country-england" type="radio" value="income" name="esatype">
+            <label for="country-england">
+              Work-related activity group (WRAG)
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="country-wales" type="radio" value="contribution" name="esatype">
+            <label for="country-wales">
+              Support group
+            </label>
+          </div>
+          <div class="option-text">
+            or
+          </div>
+          <div class="multiple-choice">
+            <input id="country-scotland" type="radio" value="contribution" name="esatype">
+            <label for="country-scotland">
+              I'm in the assessment phase
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <a href="/benefits/other-income/carers-other" class="button" id="next-button">Next</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

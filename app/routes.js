@@ -388,3 +388,11 @@ router.get(/counciltax-handler/, function (req, res) {
     res.redirect('/where-you-live/cya');
   }
 });
+
+router.get(/esa-handler/, function (req, res) {
+  if (req.query.esr == 'income') {
+    res.redirect('/benefits/done'); 
+  } else {
+    res.redirect('/benefits/other-income/esa-amount');
+  }
+});

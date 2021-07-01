@@ -1,0 +1,92 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-bsa.html' %}
+
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Which type of Employment and Support Allowance (ESA) do you get? - LIS training - NHSBSA
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <fieldset>
+        <legend>
+          <h1 class="heading-large" id="question-heading">
+            <span class="heading-secondary">Income and other money</span>
+            How much ESA do you get?
+          </h1>
+        </legend>
+        <div class="inline-form-groups"> 
+          <div class="multiple-choice">
+            <input data-target="esa-nested" id="beneficiary-income-benefits-employmentsupportallowance-income-frequency-week" type="radio" value="WEEK" class="show-input" name="esa">
+            <label for="beneficiary-income-benefits-employmentsupportallowance-income-frequency-week">
+              I know my weekly rate
+            </label>
+          </div>
+          <div class="panel panel-border-narrow show-hide-js nested-group" id="esa-nested">
+            <fieldset>
+              <legend>
+                <label for="beneficiary-income-benefits-employmentsupportallowance-income-amount-week">
+                  <b>How much is your weekly rate of Employment and Support Allowance?</b>
+                </label>
+              </legend>
+              <div class="form-hint">
+                The amount must include pence. For example, £146.20
+              </div>
+              <div class="form-group">
+                <div class="currency-input">
+                  <div class="currency-input-inner">
+                    <span class="symbol">£</span>
+                    <input id="beneficiary-income-benefits-employmentsupportallowance-income-amount-week" class="currency-amount form-control" type="text" value="">
+                  </div>
+                </div>     
+              </div>
+            </fieldset>
+          </div>
+          <div class="multiple-choice">
+            <input data-target="two-week-nested" id="beneficiary-income-benefits-employmentsupportallowance-income-frequency-two-week" type="radio" value="TWO_WEEK" name="esa" class="show-input">
+            <label for="beneficiary-income-benefits-employmentsupportallowance-income-frequency-two-week">
+              I know how much I get paid every 2 weeks
+            </label>
+          </div>
+          <div class="panel panel-border-narrow show-hide-js nested-group" id="two-week-nested">
+            <fieldset>
+              <legend>
+                <label for="beneficiary-income-benefits-employmentsupportallowance-income-amount-two-week">
+                  <b>How much Employment and Support Allowance do you get every 2 weeks?</b>
+                </label>
+              </legend>
+           
+              <div class="form-hint">
+                The amount must include pence. For example, £146.20
+              </div>
+              <div class="form-group">
+                <div class="currency-input">
+                  <div class="currency-input-inner">
+                    <span class="symbol">£</span>
+                    <input id="beneficiary-income-benefits-employmentsupportallowance-income-amount-two-week" class="currency-amount form-control" type="text" value="">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <a href="/benefits/other-income/esa-incapacity" class="button">Next</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
